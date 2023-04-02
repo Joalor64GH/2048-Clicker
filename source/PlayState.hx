@@ -20,7 +20,7 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
-    // for testing purposes
+        // for testing purposes
         if (FlxG.keys.justPressed.W)
 	    FlxG.switchState(new WinState());
     }

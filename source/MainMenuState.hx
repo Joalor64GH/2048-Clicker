@@ -21,11 +21,11 @@ class MainMenuState extends FlxState
 		add(titleText);
 
 		playButton = new FlxButton(0, 0, "Play", clickPlay);
-		playButton.screenCenter(XY)
+		playButton.screenCenter(XY);
 		add(playButton);
 
 		exitButton = new FlxButton(0, 0, "Exit", clickExit);
-		exitButton.screenCenter(X)
+		exitButton.screenCenter(X);
 		exitButton.y = playButton.y - exitButton.height - 2;
 		add(exitButton);
 
