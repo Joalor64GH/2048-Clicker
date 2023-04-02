@@ -16,14 +16,18 @@ class BSODState extends FlxState
     {
         super.create();
 
-        bsod = new FlxSprite(0, 0);
-        bsod.loadGraphic(Paths.image('bluescreen'));
-        bsod.screenCenter(X);
-        add(bsod);
+        bsod = new FlxSprite(-80).loadGraphic(Paths.image('bluescreen'));
+	    bsod.scrollFactor.x = 0;
+	    bsod.scrollFactor.y = 0.18;
+	    bsod.setGraphicSize(Std.int(bsod.width * 1.1));
+	    bsod.updateHitbox();
+	    bsod.screenCenter();
+	    bsod.antialiasing = true;
+	    add(bsod);
 
         FlxG.sound.play(Paths.sound('bsod'));
 
-        new FlxTimer().start(3.4, closeGame);
+        new FlxTimer().start(3.7, closeGame);
     }
 
     public function closeGame(time:FlxTimer = null)
