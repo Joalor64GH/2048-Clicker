@@ -3,14 +3,14 @@ package;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
-import flixel.ui.FlxButton;
+import flixel.addons.ui.FlxButtonPlus;
 import flixel.util.FlxColor;
 
 class MainMenuState extends FlxState
 {
 	var titleText:FlxText;
-	var playButton:FlxButton;
-	var exitButton:FlxButton;
+	var playButton:FlxButtonPlus;
+	var exitButton:FlxButtonPlus;
 
 	override public function create()
 	{
@@ -19,11 +19,17 @@ class MainMenuState extends FlxState
 		titleText.screenCenter(X);
 		add(titleText);
 
-		playButton = new FlxButton(0, 0, "Play", clickPlay);
+		playButton = new FlxButtonPlus(0, 0, function()
+		{
+			clickPlay();
+		}, "Play", 200, 40);
 		playButton.screenCenter(XY);
 		add(playButton);
 
-		exitButton = new FlxButton(0, 0, "Exit", clickExit);
+		exitButton = new FlxButtonPlus(0, 0, function()
+		{
+			clickExit();
+		}, "Exit, 200, 40);
 		exitButton.screenCenter(X);
 		exitButton.y = playButton.y + exitButton.height + 2;
 		add(exitButton);
