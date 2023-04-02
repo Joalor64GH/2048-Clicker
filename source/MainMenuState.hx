@@ -38,10 +38,10 @@ class MainMenuState extends FlxState
 		super.create();
 	}
 
-    var code = '';
+    	var code = '';
 	var keyTimer:Float = 0;
 
-    function onKeyDown(event:KeyboardEvent):Void{
+    	function onKeyDown(event:KeyboardEvent):Void{
 		code = code + String.fromCharCode(event.charCode);
 		keyTimer = 2;
 		if(code=="bluescreen"){

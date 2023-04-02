@@ -21,8 +21,8 @@ class WinState extends FlxState
         add(win);
 
         DisplayText = new FlxText(0, 0, FlxG.width, "You win!\nPRESS ANY BUTTON TO CONTINUE", 32);
-	    DisplayText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-	    add(DisplayText);
+	DisplayText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+	add(DisplayText);
 
         FlxG.sound.play(Paths.sound('win'));
     }
