@@ -17,13 +17,13 @@ class WinState extends FlxState
         super.create();
 
         win = new FlxSprite(-80).loadGraphic(Paths.image('win'));
-	    win.scrollFactor.x = 0;
-	    win.scrollFactor.y = 0.18;
-	    win.setGraphicSize(Std.int(win.width * 1.1));
-	    win.updateHitbox();
-	    win.screenCenter();
-	    win.antialiasing = true;
-	    add(win);
+	win.scrollFactor.x = 0;
+	win.scrollFactor.y = 0.18;
+	win.setGraphicSize(Std.int(win.width * 1.1));
+	win.updateHitbox();
+	win.screenCenter();
+	win.antialiasing = true;
+	add(win);
 
         DisplayText = new FlxText(0, 0, FlxG.width, "You win!\nPRESS ANY BUTTON TO CONTINUE", 32);
 	DisplayText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
