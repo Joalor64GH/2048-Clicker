@@ -15,20 +15,18 @@ class MainMenuState extends FlxState
 
 	override public function create()
 	{
-		titleText = new FlxText(20, 0, 0, "2048\nClicker", 22);
+		titleText = new FlxText(0, 20, 0, "2048 Clicker", 18);
 		titleText.alignment = CENTER;
 		titleText.screenCenter(X);
 		add(titleText);
 
 		playButton = new FlxButton(0, 0, "Play", clickPlay);
-		playButton.onUp.sound = FlxG.sound.play(Paths.sound('select'));
-		playButton.x = (FlxG.width / 2) - 10 - playButton.width;
-		playButton.y = FlxG.height - playButton.height - 10;
+		playButton.screenCenter(XY)
 		add(playButton);
 
 		exitButton = new FlxButton(0, 0, "Exit", clickExit);
-		exitButton.x = (FlxG.width / 2) + 10;
-		exitButton.y = FlxG.height - exitButton.height - 10;
+		exitButton.screenCenter(X)
+		exitButton.y = playButton.y - exitButton.height - 2;
 		add(exitButton);
 
 		FlxG.sound.playMusic(Paths.music('menu'), 1);
@@ -41,12 +39,14 @@ class MainMenuState extends FlxState
     	var code = '';
 	var keyTimer:Float = 0;
 
-    	function onKeyDown(event:KeyboardEvent):Void{
+    	function onKeyDown(event:KeyboardEvent):Void {
 		code = code + String.fromCharCode(event.charCode);
 		keyTimer = 2;
-		if(code=="bluescreen"){
+		if(code=="bluescreen")
+		{
 			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN,onKeyDown);
 			FlxG.switchState(new BSODState());
+			FlxG.sound.music.volume = 0;
 		}
 	}
 
@@ -55,11 +55,26 @@ class MainMenuState extends FlxState
 		FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
 		{
 			FlxG.switchState(new PlayState());
+			FlxG.sound.play(Paths.sound('select'));
+			FlxG.sound.music.volume = 0;
 		});
 	}
 
 	function clickExit()
 	{
 		Sys.exit(0);
+	}
+
+	override function update(elapsed:Float)
+	{
+		super.update(elapsed);
+
+		if(keyTimer>0){
+			keyTimer-=elapsed;
+		}
+		if(keyTimer<=0){
+			keyTimer=0;
+			code="";
+		}
 	}
 }

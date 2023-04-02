@@ -32,8 +32,6 @@ class WinState extends FlxState
         super.update(elapsed);
 
         if (FlxG.keys.justPressed.ANY)
-	{
 	    FlxG.switchState(new MainMenuState());
-	}
     }
 }

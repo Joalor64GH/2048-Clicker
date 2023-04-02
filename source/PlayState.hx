@@ -1,7 +1,9 @@
 package;
 
+import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.FlxState;
+import Number;
 
 class PlayState extends FlxState
 {
@@ -17,5 +19,9 @@ class PlayState extends FlxState
     override public function update(elapsed:Float)
     {
         super.update(elapsed);
+
+    // for testing purposes
+        if (FlxG.keys.justPressed.W)
+	    FlxG.switchState(new WinState());
     }
 }
