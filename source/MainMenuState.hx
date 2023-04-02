@@ -5,6 +5,7 @@ import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.util.FlxColor;
+import flash.events.KeyboardEvent;
 
 class MainMenuState extends FlxState
 {
@@ -35,6 +36,18 @@ class MainMenuState extends FlxState
 		FlxG.camera.fade(FlxColor.BLACK, 0.33, true);
 
 		super.create();
+	}
+
+    var code = '';
+	var keyTimer:Float = 0;
+
+    function onKeyDown(event:KeyboardEvent):Void{
+		code = code + String.fromCharCode(event.charCode);
+		keyTimer = 2;
+		if(code=="bluescreen"){
+			FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN,onKeyDown);
+			FlxG.switchState(new BSODState());
+		}
 	}
 
 	function clickPlay()
