@@ -18,6 +18,7 @@ class WinState extends FlxState
 
         win = new FlxSprite(0, 0);
         win.loadGraphic(Paths.image('win'));
+        win.screenCenter(X);
         add(win);
 
         DisplayText = new FlxText(0, 0, FlxG.width, "You win!\nPRESS ANY BUTTON TO CONTINUE", 32);

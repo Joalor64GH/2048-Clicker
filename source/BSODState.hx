@@ -18,6 +18,7 @@ class BSODState extends FlxState
 
         bsod = new FlxSprite(0, 0);
         bsod.loadGraphic(Paths.image('bluescreen'));
+        bsod.screenCenter(X)
         add(bsod);
 
         FlxG.sound.play(Paths.sound('bsod'));
