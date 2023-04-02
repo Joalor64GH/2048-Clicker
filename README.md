@@ -1,3 +1,3 @@
-# HaxeFlixel Template
+# 2048 Clicker
 
-Just a simple template for making games with Flixel.
+2048, but it's a clicker game.
