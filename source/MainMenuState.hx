@@ -14,8 +14,9 @@ class MainMenuState extends FlxState
 
 	override public function create()
 	{
-		titleText = new FlxText(0, 20, 0, "2048 Clicker", 36);
-		titleText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		titleText = new FlxText(0, 20, 0, "2048 Clicker", 32);
+		titleText.alignment = CENTER;
+		titleText.screenCenter(X);
 		add(titleText);
 
 		playButton = new FlxButtonPlus(0, 0, clickPlay, "Play", 200, 40);
