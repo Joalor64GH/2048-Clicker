@@ -29,7 +29,7 @@ class MainMenuState extends FlxState
 		exitButton = new FlxButtonPlus(0, 0, function()
 		{
 			clickExit();
-		}, "Exit, 200, 40);
+		}, "Exit", 200, 40);
 		exitButton.screenCenter(X);
 		exitButton.y = playButton.y + exitButton.height + 2;
 		add(exitButton);
