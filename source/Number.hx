@@ -3,7 +3,7 @@ package;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 
-class Ornament extends FlxSprite
+class Number extends FlxSprite
 {
     // work in progress
 }
