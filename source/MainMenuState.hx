@@ -9,12 +9,13 @@ import flixel.util.FlxColor;
 class MainMenuState extends FlxState
 {
 	var titleText:FlxText;
+
 	var playButton:FlxButtonPlus;
 	var exitButton:FlxButtonPlus;
 
 	override public function create()
 	{
-		titleText = new FlxText(0, 20, 0, "2048 Clicker", 32);
+		titleText = new FlxText(0, 20, 0, "2048 Clicker", 40);
 		titleText.alignment = CENTER;
 		titleText.screenCenter(X);
 		add(titleText);
@@ -27,6 +28,11 @@ class MainMenuState extends FlxState
 		exitButton.screenCenter(X);
 		exitButton.y = playButton.y + exitButton.height + 2;
 		add(exitButton);
+
+		var versionShit:FlxText = new FlxText(5, FlxG.height - 24, 0, "v" + Application.current.meta.get('version'), 12);
+		versionShit.scrollFactor.set();
+		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShit);
 
 		FlxG.sound.playMusic(Paths.music('menu'), 1);
 
@@ -47,7 +53,10 @@ class MainMenuState extends FlxState
 
 	function clickExit()
 	{
-		Sys.exit(0);
+		FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
+		{
+			Sys.exit(0);
+		});
 	}
 
 	override function update(elapsed:Float)

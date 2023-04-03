@@ -30,13 +30,21 @@ class WinState extends FlxState
 	add(DisplayText);
 
         FlxG.sound.play(Paths.sound('win'));
+
+        FlxG.camera.fade(FlxColor.BLACK, 0.33, true);
     }
 
     override public function update(elapsed:Float)
     {
         super.update(elapsed);
 
-        if (FlxG.keys.justPressed.ANY)
-	    FlxG.switchState(new MainMenuState());
+        if (FlxG.keys.justPressed.ANY) {
+	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, returnToMenu);
+        }
     }
+
+    function returnToMenu()
+	{
+		FlxG.switchState(new MainMenuState());
+	}
 }
