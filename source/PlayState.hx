@@ -45,7 +45,7 @@ class PlayState extends FlxState
             win = true;
         }
         if (FlxG.keys.justPressed.W /*&& win*/) {
-	        FlxG.camera.fade(FlxColor.BLACK, 0.33, false, winner);
+	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, winner);
             FlxG.sound.music.volume = 0;
         }
         else if (FlxG.keys.justPressed.ESCAPE) {
