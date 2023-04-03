@@ -44,7 +44,7 @@ class WinState extends FlxState
     }
 
     function returnToMenu()
-	{
-		FlxG.switchState(new MainMenuState());
-	}
+{
+	FlxG.switchState(new MainMenuState());
+}
 }

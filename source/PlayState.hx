@@ -27,9 +27,9 @@ class PlayState extends FlxState
         add(text);
 
         var tip:FlxText = new FlxText(5, FlxG.height - 24, 0, "Press ESC to exit at any time!", 12);
-		tip.scrollFactor.set();
-		tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(tip);
+    tip.scrollFactor.set();
+    tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    add(tip);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
@@ -55,12 +55,12 @@ class PlayState extends FlxState
     }
 
     function winner()
-	{
-		FlxG.switchState(new WinState(/*win*/));
-	}
+{
+	FlxG.switchState(new WinState(/*win*/));
+}
 
     function returnToMenu()
-	{
-		FlxG.switchState(new MainMenuState());
-	}
+{
+	FlxG.switchState(new MainMenuState());
+}
 }
