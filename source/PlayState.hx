@@ -43,12 +43,6 @@ class PlayState extends FlxState
             click();
         }
 
-        function click(){
-            new FlxTimer().start(0.01, function(timer){
-                FlxG.sound.play(Paths.sound('select'));
-            });
-        }
-
         // for testing purposes
         if (win) {
             win = true;
@@ -61,6 +55,12 @@ class PlayState extends FlxState
             FlxG.camera.fade(FlxColor.BLACK, 0.33, false, returnToMenu);
             FlxG.sound.music.volume = 0;
         }
+    }
+
+    function click(){
+         new FlxTimer().start(0.01, function(timer){
+            FlxG.sound.play(Paths.sound('select'));
+        });
     }
 
     function winner()
