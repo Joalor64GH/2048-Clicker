@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
+import lime.app.Application;
 import flixel.addons.ui.FlxButtonPlus;
 import flixel.util.FlxColor;
 
