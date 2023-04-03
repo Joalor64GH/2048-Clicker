@@ -11,7 +11,6 @@ import flixel.util.FlxColor;
 class MainMenuState extends FlxState
 {
 	var logo:FlxSprite;
-
 	var playButton:FlxButtonPlus;
 	var exitButton:FlxButtonPlus;
 
@@ -48,7 +47,6 @@ class MainMenuState extends FlxState
 		FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
 		{
 			FlxG.switchState(new PlayState());
-			FlxG.sound.play(Paths.sound('select'));
 			FlxG.sound.music.volume = 0;
 		});
 	}
