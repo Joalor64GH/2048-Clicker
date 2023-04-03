@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="infinity.png">
+<SubTexture name="infinity red0000" x="220" y="435" width="220" height="86" frameX="-16" frameY="-45" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity scarlet0000" x="0" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity orange0000" x="0" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity yelloworange0000" x="220" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity yellow0000" x="220" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity lime0000" x="0" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity green0000" x="220" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity mint0000" x="0" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity cyan0000" x="220" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity skyblue0000" x="0" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity blue0000" x="220" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity royalpurple0000" x="440" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity purple0000" x="440" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity this0000" x="440" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity magenta0000" x="440" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity hotpink0000" x="440" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+<SubTexture name="infinity loop0000" x="0" y="435" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+</TextureAtlas>

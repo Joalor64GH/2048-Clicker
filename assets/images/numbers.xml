@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="numbers.png">
+<SubTexture name="numbers one0000" x="950" y="286" width="106" height="133" frameX="-25" frameY="-10" frameWidth="150" frameHeight="150" />
+<SubTexture name="numbers two0000" x="922" y="427" width="126" height="133" frameX="-13" frameY="-9" frameWidth="150" frameHeight="150" />
+<SubTexture name="numbers four0000" x="0" y="144" width="119" height="142" frameX="-18" frameY="-4" frameWidth="150" frameHeight="150" />
+<SubTexture name="numbers eight0000" x="851" y="142" width="108" height="134" frameX="-17" frameY="-8" frameWidth="150" frameHeight="150" />
+<SubTexture name="numbers blah0000" x="707" y="427" width="215" height="140" frameX="-22" frameY="-6" frameWidth="250" frameHeight="150" />
+<SubTexture name="numbers what0000" x="0" y="568" width="222" height="140" frameX="-17" frameY="-4" frameWidth="250" frameHeight="150" />
+<SubTexture name="numbers when0000" x="639" y="708" width="197" height="133" frameX="-25" frameY="-7" frameWidth="250" frameHeight="150" />
+<SubTexture name="numbers why0000" x="527" y="142" width="324" height="141" frameX="-8" frameY="-5" frameWidth="350" frameHeight="150" />
+<SubTexture name="numbers how0000" x="647" y="568" width="307" height="137" frameX="-20" frameY="-2" frameWidth="350" frameHeight="150" />
+<SubTexture name="numbers alot0000" x="119" y="144" width="319" height="141" frameX="-19" frameY="-3" frameWidth="350" frameHeight="150" />
+<SubTexture name="numbers toomuch0000" x="437" y="848" width="431" height="136" frameX="-12" frameY="-5" frameWidth="450" frameHeight="150" />
+<SubTexture name="numbers yaywedidit0000" x="0" y="848" width="437" height="137" frameX="-8" frameY="-6" frameWidth="450" frameHeight="150" />
+<SubTexture name="numbers waitwhat0000" x="0" y="286" width="426" height="141" frameX="-13" frameY="-4" frameWidth="450" frameHeight="150" />
+<SubTexture name="numbers uhhwoah0000" x="222" y="568" width="425" height="140" frameX="-10" frameY="-2" frameWidth="450" frameHeight="150" />
+<SubTexture name="numbers no0000" x="527" y="0" width="535" height="142" frameX="-8" frameY="-3" frameWidth="550" frameHeight="150" />
+<SubTexture name="numbers stopit0000" x="0" y="0" width="527" height="144" frameX="-10" frameY="0" frameWidth="550" frameHeight="150" />
+<SubTexture name="numbers NONO0000" x="426" y="286" width="524" height="141" frameX="-11" frameY="-4" frameWidth="550" frameHeight="150" />
+<SubTexture name="numbers WHATAREYOUDOING0000" x="0" y="708" width="639" height="140" frameX="-7" frameY="-5" frameWidth="650" frameHeight="150" />
+<SubTexture name="numbers STOPPP0000" x="1062" y="0" width="584" height="129" frameX="-38" frameY="-8" frameWidth="650" frameHeight="150" />
+<SubTexture name="numbers OMGGG0000" x="0" y="985" width="590" height="129" frameX="-33" frameY="-7" frameWidth="650" frameHeight="150" />
+<SubTexture name="numbers NOOOOO0000" x="0" y="427" width="707" height="141" frameX="-25" frameY="-4" frameWidth="750" frameHeight="150" />
+</TextureAtlas>
