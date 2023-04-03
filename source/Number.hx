@@ -9,7 +9,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 class Number extends FlxSprite
 {
     public static inline final NUMBERS:Array<String> = [
-		"1", 
+	"1", 
         "2", 
         "4",
         "8",  
@@ -21,7 +21,7 @@ class Number extends FlxSprite
         "512", 
         "1024", 
         "2048",
-		"4096", 
+	"4096", 
         "8192", 
         "16384", 
         "32768", 
@@ -30,10 +30,10 @@ class Number extends FlxSprite
         "262144", 
         "524288", 
         "1048576"
-	];
+    ];
 
-	public function new()
-	{
+    public function new()
+    {
         super();
         loadGraphic(Paths.image('numbers/$NUMBERS'));
     }
