@@ -29,8 +29,8 @@ class Number extends FlxSprite
         '131072', 
         '262144', 
         '524288', 
-        '1048576'*/
-    ];
+        '1048576'
+    ];*/
 
     public function new()
     {

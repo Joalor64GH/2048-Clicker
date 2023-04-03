@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="exponents.png">
-<SubTexture name="exponents twentyone0000" x="481" y="0" width="153" height="151" frameX="-6" frameY="-6" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentytwo0000" x="321" y="0" width="160" height="156" frameX="-4" frameY="-1" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentythree0000" x="0" y="320" width="158" height="155" frameX="-5" frameY="-3" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentyfour0000" x="301" y="320" width="159" height="153" frameX="-7" frameY="-7" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentyfive0000" x="158" y="0" width="163" height="158" frameX="-1" frameY="-2" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentysix0000" x="0" y="162" width="159" height="158" frameX="-6" frameY="-5" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentyseven0000" x="342" y="475" width="156" height="149" frameX="-8" frameY="-7" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentyeight0000" x="0" y="626" width="159" height="144" frameX="-5" frameY="-12" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents twentynine0000" x="481" y="151" width="150" height="151" frameX="-13" frameY="-9" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents thirty0000" x="0" y="475" width="156" height="151" frameX="-9" frameY="-10" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents fourty0000" x="481" y="302" width="148" height="149" frameX="-11" frameY="-10" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents fifty0000" x="0" y="0" width="158" height="162" frameX="-8" frameY="-2" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents sixty0000" x="159" y="162" width="153" height="158" frameX="-9" frameY="-6" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents seventy0000" x="321" y="156" width="147" height="156" frameX="-10" frameY="-7" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents eighty0000" x="158" y="320" width="143" height="155" frameX="-15" frameY="-7" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents ninety0000" x="634" y="0" width="158" height="149" frameX="-6" frameY="-7" frameWidth="170" frameHeight="170" />
-<SubTexture name="exponents hundredlmao0000" x="156" y="475" width="186" height="151" frameX="-7" frameY="-8" frameWidth="200" frameHeight="170" />
+    <SubTexture name="exponents twentyone0000" x="481" y="0" width="153" height="151" frameX="-6" frameY="-6" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentytwo0000" x="321" y="0" width="160" height="156" frameX="-4" frameY="-1" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentythree0000" x="0" y="320" width="158" height="155" frameX="-5" frameY="-3" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentyfour0000" x="301" y="320" width="159" height="153" frameX="-7" frameY="-7" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentyfive0000" x="158" y="0" width="163" height="158" frameX="-1" frameY="-2" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentysix0000" x="0" y="162" width="159" height="158" frameX="-6" frameY="-5" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentyseven0000" x="342" y="475" width="156" height="149" frameX="-8" frameY="-7" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentyeight0000" x="0" y="626" width="159" height="144" frameX="-5" frameY="-12" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents twentynine0000" x="481" y="151" width="150" height="151" frameX="-13" frameY="-9" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents thirty0000" x="0" y="475" width="156" height="151" frameX="-9" frameY="-10" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents fourty0000" x="481" y="302" width="148" height="149" frameX="-11" frameY="-10" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents fifty0000" x="0" y="0" width="158" height="162" frameX="-8" frameY="-2" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents sixty0000" x="159" y="162" width="153" height="158" frameX="-9" frameY="-6" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents seventy0000" x="321" y="156" width="147" height="156" frameX="-10" frameY="-7" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents eighty0000" x="158" y="320" width="143" height="155" frameX="-15" frameY="-7" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents ninety0000" x="634" y="0" width="158" height="149" frameX="-6" frameY="-7" frameWidth="170" frameHeight="170" />
+    <SubTexture name="exponents hundredlmao0000" x="156" y="475" width="186" height="151" frameX="-7" frameY="-8" frameWidth="200" frameHeight="170" />
 </TextureAtlas>

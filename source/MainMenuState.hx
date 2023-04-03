@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxState;
+import flixel.FlxSprite;
 import flixel.text.FlxText;
 import lime.app.Application;
 import flixel.addons.ui.FlxButtonPlus;
@@ -9,17 +10,17 @@ import flixel.util.FlxColor;
 
 class MainMenuState extends FlxState
 {
-	var titleText:FlxText;
+	var logo:FlxSprite;
 
 	var playButton:FlxButtonPlus;
 	var exitButton:FlxButtonPlus;
 
 	override public function create()
 	{
-		titleText = new FlxText(0, 20, 0, "2048 Clicker", 40);
-		titleText.alignment = CENTER;
-		titleText.screenCenter(X);
-		add(titleText);
+		logo = new FlxSprite(0, 0);
+        logo.loadGraphic(Paths.image('logo'));
+        logo.screenCenter(X);
+        add(logo);
 
 		playButton = new FlxButtonPlus(0, 0, clickPlay, "Play", 200, 40);
 		playButton.screenCenter(XY);
