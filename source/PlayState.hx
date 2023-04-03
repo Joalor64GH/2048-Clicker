@@ -23,7 +23,7 @@ class PlayState extends FlxState
 
         // text should change depending on what number you're on
         var text = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
-        text.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+        text.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
         add(text);
 
         var tip:FlxText = new FlxText(5, FlxG.height - 24, 0, "Press ESC to exit at any time!", 12);
