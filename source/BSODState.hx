@@ -27,7 +27,7 @@ class BSODState extends FlxState
 
         FlxG.sound.play(Paths.sound('bsod'));
 
-        new FlxTimer().start(3.9, closeGame);
+        new FlxTimer().start(4, closeGame);
     }
 
     public function closeGame(time:FlxTimer = null)

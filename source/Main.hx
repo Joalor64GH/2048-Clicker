@@ -17,6 +17,6 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
-		addChild(new FlxGame(0, 0, MainMenuState));
+		addChild(new FlxGame(0, 0, MainMenuState, #if (flixel < "5.0.0") -1, #end 60, 60, false, false));
 	}
 }

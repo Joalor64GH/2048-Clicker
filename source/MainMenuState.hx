@@ -55,6 +55,9 @@ class MainMenuState extends FlxState
 		super.update(elapsed);
 
 		if (FlxG.keys.justPressed.B)
+		{
 	    		FlxG.switchState(new BSODState());
+				FlxG.sound.music.volume = 0;
+		}
 	}
 }
