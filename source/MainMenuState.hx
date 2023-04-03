@@ -18,9 +18,9 @@ class MainMenuState extends FlxState
 	override public function create()
 	{
 		logo = new FlxSprite(0, 0);
-        logo.loadGraphic(Paths.image('logo'));
-        logo.screenCenter(X);
-        add(logo);
+        	logo.loadGraphic(Paths.image('logo'));
+        	logo.screenCenter(X);
+        	add(logo);
 
 		playButton = new FlxButtonPlus(0, 0, clickPlay, "Play", 200, 40);
 		playButton.screenCenter(XY);
