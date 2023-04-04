@@ -50,15 +50,15 @@ class PlayState extends FlxState
         }
         if (FlxG.keys.justPressed.W /*&& win*/) {
 	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
-				FlxG.switchState(new WinState(/*win*/));
-				FlxG.sound.music.volume = 0;
-			});
+		FlxG.switchState(new WinState(/*win*/));
+		FlxG.sound.music.volume = 0;
+	    });
         }
         else if (FlxG.keys.justPressed.ESCAPE) {
             FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
-				FlxG.switchState(new MainMenuState());
-				FlxG.sound.music.volume = 0;
-			});
+		FlxG.switchState(new MainMenuState());
+		FlxG.sound.music.volume = 0;
+	    });
         }
     }
 
