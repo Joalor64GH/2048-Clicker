@@ -30,8 +30,7 @@ class BSODState extends FlxState
         new FlxTimer().start(4, closeGame);
     }
 
-    public function closeGame(time:FlxTimer = null)
-    {
+    public function closeGame(time:FlxTimer = null) {
         Sys.exit(0);
     }
 }

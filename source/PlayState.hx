@@ -80,7 +80,7 @@ class PlayState extends FlxState
 
     function click() {
         new FlxTimer().start(0.01, function(timer) {
-            FlxG.sound.play(Paths.sound('select'));
+            FlxG.sound.play(Paths.sound('click'));
         });
     }
 
