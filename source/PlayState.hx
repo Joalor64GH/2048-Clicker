@@ -36,7 +36,7 @@ class PlayState extends FlxState
 	var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
     	winner.scrollFactor.set();
     	winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        if (!win)
+        if (win)
             add(winner);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
