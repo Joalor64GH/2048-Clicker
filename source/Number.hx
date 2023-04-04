@@ -6,7 +6,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 class Number extends FlxSprite
 {
-    public var num:String;
+    	public var num:String;
 
 	public function new(x:Float, num:String = 'one')
 	{
@@ -17,7 +17,7 @@ class Number extends FlxSprite
 		var tex = Paths.getSparrowAtlas('numbers');
 		frames = tex;
 
-        // using code from fnf as placeholders
+        	// using code from fnf as placeholders
 		/*animation.addByPrefix('bf', "BF idle dance white", 24);
 		animation.addByPrefix('bfConfirm', 'BF HEY!!', 24, false);
 		animation.addByPrefix('gf', "GF Dancing Beat WHITE", 24);
@@ -36,7 +36,7 @@ class Number extends FlxSprite
 
 class Exponent extends FlxSprite
 {
-    public var expo:String;
+    	public var expo:String;
 
 	public function new(x:Float, expo:String = 'twentyone')
 	{
@@ -65,8 +65,6 @@ class Exponent extends FlxSprite
 
 class Infinity extends FlxSprite
 {
-    public var inf:String;
-
 	public function new(x:Float, y:Float)
 	{
 		super(x, y);
