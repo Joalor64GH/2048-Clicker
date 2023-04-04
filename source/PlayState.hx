@@ -13,6 +13,9 @@ import Number;
 class PlayState extends FlxState
 {
     var number:Number;
+    var exponent:Exponent;
+    var infinity:Infinity;
+
     var win:Bool;
 
     override public function create()
@@ -39,9 +42,7 @@ class PlayState extends FlxState
         super.update(elapsed);
 
         if (FlxG.mouse.justPressed)
-        {
             click();
-        }
 
         // for testing purposes
         if (win) {
@@ -57,8 +58,8 @@ class PlayState extends FlxState
         }
     }
 
-    function click(){
-         new FlxTimer().start(0.01, function(timer){
+    function click() {
+         new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('select'));
         });
     }
