@@ -48,7 +48,8 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
-        if (win) {
+	// for testing purposes
+        if (FlxG.keys.justPressed.X) {
             win = true;
         }
 
@@ -57,18 +58,17 @@ class PlayState extends FlxState
             click();
         }
 
-        // for testing purposes
-	//if (win) {
-        if (FlxG.keys.justPressed.W) 
-	{
-	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
-            {
-		FlxG.switchState(new WinState());
-		FlxG.sound.music.volume = 0;
-	    });
-	}
-        //}
-        else if (FlxG.keys.justPressed.ESCAPE) 
+	if (win) {
+            if (FlxG.keys.justPressed.W) 
+	    {
+	        FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
+            	{
+		    FlxG.switchState(new WinState());
+		    FlxG.sound.music.volume = 0;
+	        });
+	    }
+        }
+        /*else*/ if (FlxG.keys.justPressed.ESCAPE) 
 	{
             FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
 	    {
