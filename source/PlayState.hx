@@ -1,5 +1,6 @@
 package;
 
+import Number;
 import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.input.mouse.FlxMouse;
@@ -7,7 +8,6 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import Number;
 
 class PlayState extends FlxState
 {
@@ -67,14 +67,14 @@ class PlayState extends FlxState
 
     function click() 
     {
-         new FlxTimer().start(0.01, function(timer) {
+        new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('select'));
         });
     }
 
     function updateText(NewText:String):Void 
     {
-		text.text = NewText;
-		text.alpha = 0;
-	}
+	text.text = NewText;
+	text.alpha = 0;
+    }
 }
