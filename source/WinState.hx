@@ -41,7 +41,7 @@ class WinState extends FlxState
 
         if (FlxG.keys.justPressed.ANY || FlxG.mouse.justPressed) {
 	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
-		FlxG.switchState(new PlayState());
+		FlxG.switchState(new MainMenuState());
 	    });
         }
     }
