@@ -1,0 +1,3 @@
+Left Mouse Button - Click on Stuff
+W - Win the Game
+B - ;) (Use in Main Menu)

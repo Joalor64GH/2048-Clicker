@@ -17,11 +17,11 @@ class PlayState extends FlxState
     var exponent:Exponent;
     var infinity:Infinity;
 
-    var win:Bool = false;
-
     override public function create()
     {
         super.create();
+
+        var win:Bool = false;
 
         // text should change depending on what number you're on
         header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
@@ -33,11 +33,12 @@ class PlayState extends FlxState
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
 	    
-	var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
-    	winner.scrollFactor.set();
-    	winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        if (win)
+        if (win) {
+	    var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
+    	    winner.scrollFactor.set();
+    	    winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
             add(winner);
+        }
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
@@ -54,7 +55,8 @@ class PlayState extends FlxState
         }
 
         // for testing purposes
-        if (FlxG.keys.justPressed.X) {
+        if (FlxG.keys.justPressed.X) 
+        {
             win = true;
         }
 
