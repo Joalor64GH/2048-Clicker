@@ -1,5 +1,6 @@
 package;
 
+import FPS;
 import flixel.FlxGame;
 import openfl.display.Sprite;
 
@@ -17,6 +18,7 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
-		addChild(new FlxGame(0, 0, MainMenuState, #if (flixel < "5.0.0") -1, #end 60, 60, false, false));
+		addChild(new FlxGame(0, 0, MainMenuState));
+		addChild(new FPS(10, 3, 0xFFFFFF));
 	}
 }

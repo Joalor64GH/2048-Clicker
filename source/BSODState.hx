@@ -1,7 +1,7 @@
+import flixel.util.FlxTimer;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.FlxG;
-import flixel.util.FlxTimer;
 
 class BSODState extends FlxState
 {

@@ -3,7 +3,6 @@ package;
 import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.input.mouse.FlxMouse;
-import flixel.system.FlxSound;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.FlxSprite;
@@ -41,20 +40,25 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
-        if (FlxG.mouse.justPressed)
+        if (FlxG.mouse.justPressed) {
             click();
+        }
 
         // for testing purposes
         if (win) {
             win = true;
         }
         if (FlxG.keys.justPressed.W /*&& win*/) {
-	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, winner);
-            FlxG.sound.music.volume = 0;
+	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
+				FlxG.switchState(new WinState(/*win*/));
+				FlxG.sound.music.volume = 0;
+			});
         }
         else if (FlxG.keys.justPressed.ESCAPE) {
-            FlxG.camera.fade(FlxColor.BLACK, 0.33, false, returnToMenu);
-            FlxG.sound.music.volume = 0;
+            FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
+				FlxG.switchState(new MainMenuState());
+				FlxG.sound.music.volume = 0;
+			});
         }
     }
 
@@ -62,15 +66,5 @@ class PlayState extends FlxState
          new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('select'));
         });
-    }
-
-    function winner()
-    {
-	FlxG.switchState(new WinState(/*win*/));
-    }
-
-    function returnToMenu()
-    {
-	FlxG.switchState(new MainMenuState());
     }
 }
