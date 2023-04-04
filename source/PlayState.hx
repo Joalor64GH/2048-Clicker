@@ -17,7 +17,7 @@ class PlayState extends FlxState
     var exponent:Exponent;
     var infinity:Infinity;
 
-    var win:Bool;
+    var win:Bool = false;
 
     override public function create()
     {
@@ -36,8 +36,6 @@ class PlayState extends FlxState
 	var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
     	winner.scrollFactor.set();
     	winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        if (win)
-    	    add(winner);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
@@ -48,14 +46,15 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
-	// for testing purposes
-        if (FlxG.keys.justPressed.X) {
-            win = true;
-        }
-
         if (FlxG.mouse.justPressed) 
 	{
             click();
+        }
+
+        // for testing purposes
+        if (FlxG.keys.justPressed.X) {
+            win = true;
+            add(winner);
         }
 
 	if (win) {
@@ -84,6 +83,7 @@ class PlayState extends FlxState
         });
     }
 
+    // this changes the text
     function updateText(NewText:String):Void {
 	header.text = NewText;
     }
