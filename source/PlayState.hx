@@ -37,7 +37,7 @@ class PlayState extends FlxState
     	winner.scrollFactor.set();
     	winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         if (win)
-    	    add(tip);
+    	    add(winner);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
