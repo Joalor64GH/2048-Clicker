@@ -5,14 +5,15 @@ import flixel.FlxState;
 import flixel.FlxSprite;
 import flixel.text.FlxText;
 import lime.app.Application;
-import flixel.addons.ui.FlxButtonPlus;
 import flixel.util.FlxColor;
+import flixel.ui.FlxButton;
 
 class MainMenuState extends FlxState
 {
 	var logo:FlxSprite;
-	var playButton:FlxButtonPlus;
-	var exitButton:FlxButtonPlus;
+	
+	var playButton:FlxButton;
+	var exitButton:FlxButton;
 
 	override public function create()
 	{
@@ -21,13 +22,25 @@ class MainMenuState extends FlxState
         	logo.screenCenter(X);
         	add(logo);
 
-		playButton = new FlxButtonPlus(0, 0, clickPlay, "Play", 200, 40);
-		playButton.screenCenter(XY);
+		playButton = new FlxButton(0, FlxG.height / 2 + 50, "Play", function() {
+            FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
+			{
+				FlxG.switchState(new PlayState());
+				FlxG.sound.music.volume = 0;
+			});
+        });
+		playButton.scale.set(2, 2);
+		playButton.screenCenter(X);
 		add(playButton);
 
-		exitButton = new FlxButtonPlus(0, 0, clickExit, "Exit", 200, 40);
+		exitButton = new FlxButton(0, playButton.y + 70, "Exit", function() {
+            FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
+			{
+				Sys.exit(0);
+			});
+        });
+		exitButton.scale.set(2, 2);
 		exitButton.screenCenter(X);
-		exitButton.y = playButton.y + exitButton.height + 2;
 		add(exitButton);
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 24, 0, "v" + Application.current.meta.get('version'), 12);
@@ -40,23 +53,6 @@ class MainMenuState extends FlxState
 		FlxG.camera.fade(FlxColor.BLACK, 0.33, true);
 
 		super.create();
-	}
-
-	function clickPlay()
-	{
-		FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
-		{
-			FlxG.switchState(new PlayState());
-			FlxG.sound.music.volume = 0;
-		});
-	}
-
-	function clickExit()
-	{
-		FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
-		{
-			Sys.exit(0);
-		});
 	}
 
 	override function update(elapsed:Float)
