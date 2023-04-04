@@ -42,15 +42,16 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
+        if (win) {
+            win = true;
+        }
+
         if (FlxG.mouse.justPressed) 
         {
             click();
         }
 
         // for testing purposes
-        if (win) {
-            win = true;
-        }
         if (FlxG.keys.justPressed.W /*&& win*/) {
 	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
 		FlxG.switchState(new WinState(/*win*/));
@@ -75,6 +76,5 @@ class PlayState extends FlxState
     function updateText(NewText:String):Void 
     {
 	text.text = NewText;
-	text.alpha = 0;
     }
 }
