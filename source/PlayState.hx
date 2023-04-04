@@ -11,7 +11,7 @@ import flixel.FlxState;
 
 class PlayState extends FlxState
 {
-    var text:FlxText;
+    var header:FlxText;
 
     var number:Number;
     var exponent:Exponent;
@@ -24,14 +24,20 @@ class PlayState extends FlxState
         super.create();
 
         // text should change depending on what number you're on
-        text = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
-        text.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-        add(text);
+        header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
+        header.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+        add(header);
 
         var tip:FlxText = new FlxText(5, FlxG.height - 24, 0, "Press ESC to exit at any time!", 12);
     	tip.scrollFactor.set();
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
+	    
+	var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
+    	winner.scrollFactor.set();
+    	winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        if (win)
+    	    add(tip);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
@@ -47,34 +53,38 @@ class PlayState extends FlxState
         }
 
         if (FlxG.mouse.justPressed) 
-        {
+	{
             click();
         }
 
         // for testing purposes
-        if (FlxG.keys.justPressed.W /*&& win*/) {
-	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
-		FlxG.switchState(new WinState(/*win*/));
+	//if (win) {
+        if (FlxG.keys.justPressed.W) 
+	{
+	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
+            {
+		FlxG.switchState(new WinState());
 		FlxG.sound.music.volume = 0;
 	    });
-        }
-        else if (FlxG.keys.justPressed.ESCAPE) {
-            FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
+	}
+        //}
+        else if (FlxG.keys.justPressed.ESCAPE) 
+	{
+            FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
+	    {
 		FlxG.switchState(new MainMenuState());
 		FlxG.sound.music.volume = 0;
 	    });
         }
     }
 
-    function click() 
-    {
+    function click() {
         new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('select'));
         });
     }
 
-    function updateText(NewText:String):Void 
-    {
-	text.text = NewText;
+    function updateText(NewText:String):Void {
+	header.text = NewText;
     }
 }
