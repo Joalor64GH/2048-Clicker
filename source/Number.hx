@@ -1,6 +1,6 @@
 package;
 
-// work in progress
+// work in progress bc i have no idea how atlas works
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 

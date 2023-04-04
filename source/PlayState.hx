@@ -11,6 +11,8 @@ import Number;
 
 class PlayState extends FlxState
 {
+    var text:FlxText;
+
     var number:Number;
     var exponent:Exponent;
     var infinity:Infinity;
@@ -22,7 +24,7 @@ class PlayState extends FlxState
         super.create();
 
         // text should change depending on what number you're on
-        var text = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
+        text = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
         text.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
         add(text);
 
@@ -40,7 +42,8 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
-        if (FlxG.mouse.justPressed) {
+        if (FlxG.mouse.justPressed) 
+        {
             click();
         }
 
@@ -62,9 +65,16 @@ class PlayState extends FlxState
         }
     }
 
-    function click() {
+    function click() 
+    {
          new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('select'));
         });
     }
+
+    function updateText(NewText:String):Void 
+    {
+		text.text = NewText;
+		text.alpha = 0;
+	}
 }

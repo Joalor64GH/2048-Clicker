@@ -22,8 +22,10 @@ class MainMenuState extends FlxState
         	logo.screenCenter(X);
         	add(logo);
 
-		playButton = new FlxButton(0, FlxG.height / 2 + 50, "Play", function() {
-            	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
+		playButton = new FlxButton(0, FlxG.height / 2 + 50, "Play", function() 
+		{
+            	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
+					{
 			FlxG.switchState(new PlayState());
 			FlxG.sound.music.volume = 0;
 		    });
@@ -32,8 +34,10 @@ class MainMenuState extends FlxState
 		playButton.screenCenter(X);
 		add(playButton);
 
-		exitButton = new FlxButton(0, playButton.y + 70, "Exit", function() {
-            	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
+		exitButton = new FlxButton(0, playButton.y + 70, "Exit", function() 
+		{
+            	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
+					{
 			Sys.exit(0);
 		    });
         	});
