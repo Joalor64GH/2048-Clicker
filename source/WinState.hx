@@ -29,6 +29,7 @@ class WinState extends FlxState
 	DisplayText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	add(DisplayText);
 
+	// funny jingle
         FlxG.sound.play(Paths.sound('win'));
 
         FlxG.camera.fade(FlxColor.BLACK, 0.33, true);
@@ -39,10 +40,9 @@ class WinState extends FlxState
         super.update(elapsed);
 
         if (FlxG.keys.justPressed.ANY || FlxG.mouse.justPressed) {
-	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function()
-			{
-				FlxG.switchState(new PlayState());
-			});
+	    FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() {
+		FlxG.switchState(new PlayState());
+	    });
         }
     }
 }
