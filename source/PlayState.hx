@@ -16,12 +16,12 @@ class PlayState extends FlxState
     var number:Number;
     var exponent:Exponent;
     var infinity:Infinity;
+	
+    var win:Bool = false;
 
     override public function create()
     {
         super.create();
-
-        var win:Bool = false;
 
         // text should change depending on what number you're on
         header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
