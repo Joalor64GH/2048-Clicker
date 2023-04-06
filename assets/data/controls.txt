@@ -1,3 +1,4 @@
 Left Mouse Button - Click on Stuff
 W - Win the Game
+C - Cheat >:)
 B - ;) (Use in Main Menu)

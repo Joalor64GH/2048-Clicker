@@ -17,7 +17,7 @@ class PlayState extends FlxState
     var exponent:Exponent;
     var infinity:Infinity;
 	
-    public static var win:Bool = false;
+    public static var win:Bool = true;
 
     override public function create()
     {
@@ -70,6 +70,14 @@ class PlayState extends FlxState
 	        });
 	    }
         }
+    if (FlxG.keys.justPressed.C) 
+	    {
+	        FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
+            	{
+		    FlxG.switchState(new WinState());
+		    FlxG.sound.music.volume = 0;
+	        });
+	    }
         /*else*/ if (FlxG.keys.justPressed.ESCAPE) 
 	{
             FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
