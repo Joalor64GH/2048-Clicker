@@ -17,7 +17,7 @@ class PlayState extends FlxState
     var exponent:Exponent;
     var infinity:Infinity;
 	
-    var win:Bool = false;
+    public static var win:Bool = false;
 
     override public function create()
     {
@@ -33,7 +33,7 @@ class PlayState extends FlxState
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
 	    
-        if (win) {
+        if (!win) {
 	    var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
     	    winner.scrollFactor.set();
     	    winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
