@@ -33,15 +33,12 @@ class Number extends FlxSprite
     public function new(x:Float, y:Float)
     {
 	super(x, y);
-
 	loadGraphic(Paths.image('numbers/default/$NUMBERS'));
     }
 }
 
 class Exponent extends FlxSprite
 {
-    public var expo:FlxSprite;
-
     public static final EXPONENTS:Array<String> = [
 	'21', 
         '22', 
@@ -65,7 +62,6 @@ class Exponent extends FlxSprite
     public function new(x:Float, y:Float)
     {
 	super(x, y);
-
 	loadGraphic(Paths.image('numbers/exponents/$EXPONENTS'));
     }
 }
