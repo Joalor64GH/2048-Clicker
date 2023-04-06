@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/Joalor64GH/2048-Clicker/main/assets/images/logo.png" width="40%" height="40%"/> 
+    <img src="https://raw.githubusercontent.com/Joalor64GH/2048-Clicker/main/assets/images/logo.png" width="60%" height="60%"/> 
     <br />
     <br />
 
