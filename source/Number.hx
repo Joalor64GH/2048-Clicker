@@ -93,7 +93,7 @@ class Exponent extends FlxSprite
     {
 	super(x, y);
 	    
-	switch(num)
+	switch(expo)
 	{
 	    case "twentyone":
 	        loadGraphic(Paths.image('numbers/exponents/21'));
