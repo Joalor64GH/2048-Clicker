@@ -6,8 +6,6 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 class Number extends FlxSprite
 {
-    public var num:FlxSprite;
-	
     public static final NUMBERS:Array<String> = [
 	'1', 
         '2', 
@@ -36,8 +34,7 @@ class Number extends FlxSprite
     {
 	super(x, y);
 
-	num = new FlxSprite().loadGraphic(Paths.image('numbers/default/$NUMBERS'));
-	add(num);
+	loadGraphic(Paths.image('numbers/default/$NUMBERS'));
     }
 }
 
@@ -69,8 +66,7 @@ class Exponent extends FlxSprite
     {
 	super(x, y);
 
-	expo = new FlxSprite().loadGraphic(Paths.image('numbers/exponents/$EXPONENTS'));
-	add(expo);
+	loadGraphic(Paths.image('numbers/exponents/$EXPONENTS'));
     }
 }
 
