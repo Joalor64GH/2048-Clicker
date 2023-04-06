@@ -36,7 +36,7 @@ class Number extends FlxSprite
     {
 	super(x, y);
 
-	num = new FlxSprite().loadGraphic(Paths.image('numbers/default/$EXPONENTS'));
+	num = new FlxSprite().loadGraphic(Paths.image('numbers/default/$NUMBERS'));
 	add(num);
     }
 }
