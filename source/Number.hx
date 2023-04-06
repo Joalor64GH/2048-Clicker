@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 
@@ -35,7 +36,7 @@ class Number extends FlxSprite
     {
 	super(x, y);
 
-	num = new FlxSprite().loadGraphic(Paths.image('numbers/default/' + $NUMBERS));
+	num = new FlxSprite().loadGraphic(Paths.image('numbers/default/$EXPONENTS'));
 	add(num);
     }
 }
@@ -68,7 +69,7 @@ class Exponent extends FlxSprite
     {
 	super(x, y);
 
-	expo = new FlxSprite().loadGraphic(Paths.image('numbers/exponents/' + $EXPONENTS));
+	expo = new FlxSprite().loadGraphic(Paths.image('numbers/exponents/$EXPONENTS'));
 	add(expo);
     }
 }
@@ -81,7 +82,6 @@ class Infinity extends FlxSprite
 	super(x, y);
 
 	var tex:FlxAtlasFrames;
-
 	tex = Paths.getSparrowAtlas('numbers/infinity');
 	frames = tex;
 
