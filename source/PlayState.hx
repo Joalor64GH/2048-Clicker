@@ -36,10 +36,10 @@ class PlayState extends FlxState
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
 	    
-        if (clicks >= 38) {
-	    var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
-    	    winner.scrollFactor.set();
-    	    winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
+    	winner.scrollFactor.set();
+    	winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        if (clicks >= 37) {
             add(winner);
         }
 
@@ -62,7 +62,7 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
-        if (clicks >= 38) 
+        if (clicks >= 37) 
         {
             win = true;
             trace('winner winner!');
@@ -114,25 +114,25 @@ class PlayState extends FlxState
             FlxG.sound.play(Paths.sound('click'));
             if (clicks <= 10)
                 updateText("Keep going!");
-            if (clicks == 11 && clicks >= 12)
+            else if (clicks == 11 && clicks >= 12)
                 updateText("You made it!");
-            if (clicks == 12 && clicks >= 13)
+            else if (clicks == 12 && clicks >= 13)
                 updateText("Wait, what?");
-            if (clicks == 13 && clicks >= 14)
+            else if (clicks == 13 && clicks >= 14)
                 updateText("We\'re still going??");
-            if (clicks == 14 && clicks >= 15)
+            else if (clicks == 14 && clicks >= 15)
                 updateText("Okay then...");
-            if (clicks == 15 && clicks >= 19)
+            else if (clicks == 15 && clicks >= 19)
                 updateText("These numbers are HUGE!");
-            if (clicks == 20 && clicks >= 21)
+            else if (clicks == 20 && clicks >= 21)
                 updateText("ONE MILLION!?");
-            if (clicks == 21 && clicks >= 22)
+            else if (clicks == 21 && clicks >= 22)
                 updateText("Moving on to exponents!");
-            if (clicks == 22 && clicks >= 29)
+            else if (clicks == 22 && clicks >= 29)
                 updateText("The power of 2...!");
-            if (clicks == 30 && clicks >= 31)
+            else if (clicks == 30 && clicks >= 31)
                 updateText("It\'ll just go on forever.");
-            if (clicks == 31 && clicks >= 36)
+            else if (clicks == 31 && clicks >= 36)
                 updateText("And ever...");
             else if (clicks >= 37)
                 updateText("To infinity and beyond!!");

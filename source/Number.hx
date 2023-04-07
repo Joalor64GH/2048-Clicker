@@ -154,27 +154,31 @@ class Exponent extends FlxSprite
     }
 }
 
-// work in progress bc i have no idea how atlas works
 class Infinity extends FlxSprite
 {
     public function new(x:Float, y:Float)
     {
 	super(x, y);
 
-	var tex:FlxAtlasFrames;
-	tex = Paths.getSparrowAtlas('numbers/infinity');
+	var tex = Paths.getSparrowAtlas('numbers/infinity');
 	frames = tex;
 
-	// using code from fnf as placeholders
-	/*animation.addByPrefix('bf', "BF idle dance white", 24);
-	animation.addByPrefix('bfConfirm', 'BF HEY!!', 24, false);
-	animation.addByPrefix('gf', "GF Dancing Beat WHITE", 24);
-	animation.addByPrefix('dad', "Dad idle dance BLACK LINE", 24);
-	animation.addByPrefix('spooky', "spooky dance idle BLACK LINES", 24);
-	animation.addByPrefix('pico', "Pico Idle Dance", 24);
-	animation.addByPrefix('mom', "Mom Idle BLACK LINES", 24);
-	animation.addByPrefix('parents-christmas', "Parent Christmas Idle", 24);
-	animation.addByPrefix('senpai', "SENPAI idle Black Lines", 24);
-	animation.addByPrefix('tankman', "Tankman Menu BLACK", 24);*/
+	animation.addByPrefix('R', "red", 1, false);
+	animation.addByPrefix('SC', "scarlet", 1, false);
+	animation.addByPrefix('O', "orange", 1, false);
+	animation.addByPrefix('YO', "yelloworange", 1, false);
+	animation.addByPrefix('Y', "yellow", 1, false);
+	animation.addByPrefix('LI', "lime", 1, false);
+	animation.addByPrefix('G', "green", 1, false);
+	animation.addByPrefix('MI', "mint", 1, false);
+	animation.addByPrefix('CY', "cyan", 1, false);
+	animation.addByPrefix('SB', "skyblue", 1, false);
+	animation.addByPrefix('B', "blue", 1, false);
+	animation.addByPrefix('RP', "royalpurple", 1, false);
+	animation.addByPrefix('P', "purple", 1, false);
+	animation.addByPrefix('WHAT', "this", 1, false);
+	animation.addByPrefix('MG', "magenta", 1, false);
+	animation.addByPrefix('HP', "hotpink", 1, false);
+	animation.addByPrefix('LOOP', "loop", 1, false);
     }
 }
