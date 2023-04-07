@@ -20,6 +20,7 @@ class PlayState extends FlxState
     public static var win:Bool = true;
 
     var clicks:Int = 0;
+    var clickAmount:FlxText;
 
     override public function create()
     {
@@ -35,12 +36,6 @@ class PlayState extends FlxState
     	tip.scrollFactor.set();
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
-
-        var clickAmount:FlxText = new FlxText(5, FlxG.height - 24, 0, "Clicks: 0", 12);
-    	clickAmount.scrollFactor.set();
-    	clickAmount.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        clickAmount.screenCenter(X);
-    	add(clickAmount);
 	    
         if (!win) {
 	    var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
@@ -48,6 +43,12 @@ class PlayState extends FlxState
     	    winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
             add(winner);
         }
+
+        clickAmount = new FlxText(5, FlxG.height - 24, 0, "Clicks: 0", 12);
+    	clickAmount.scrollFactor.set();
+    	clickAmount.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        clickAmount.screenCenter(X);
+    	add(clickAmount);
 
 	// placeholder sprite code
         var placeholder:FlxSprite = new FlxSprite(Paths.image('numbers/default/one'));
@@ -119,7 +120,6 @@ class PlayState extends FlxState
         });
     }
 
-    // stole code from the flixel-demos repo lmao
     function updateText(NewText:String):Void {
 	header.text = NewText;
     }
