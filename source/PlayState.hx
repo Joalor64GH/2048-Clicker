@@ -3,6 +3,7 @@ package;
 import Number;
 import flixel.FlxG;
 import flixel.text.FlxText;
+import lime.app.Application;
 import flixel.input.mouse.FlxMouse;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
@@ -13,11 +14,11 @@ class PlayState extends FlxState
 {
     var header:FlxText;
 
-    var number:Number;
-    var exponent:Exponent;
-    var infinity:Infinity;
-	
+    public static var num:Number;
+    public static var expo:Exponent;
+    public static var infinity:Infinity;
     public static var win:Bool = true;
+    public static var clicks:Int = 0;
 
     override public function create()
     {
@@ -40,6 +41,10 @@ class PlayState extends FlxState
             add(winner);
         }
 
+        num = new Number(0, 0, "1");
+        num.screenCenter();
+        add(num);
+
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
         FlxG.camera.fade(FlxColor.BLACK, 0.33, true);
@@ -58,9 +63,11 @@ class PlayState extends FlxState
         if (FlxG.keys.justPressed.X) 
         {
             win = true;
+            trace('winner winner!');
         }
 
-	if (win) {
+	if (win) 
+    {
             if (FlxG.keys.justPressed.W) 
 	    {
 	        FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
@@ -76,6 +83,7 @@ class PlayState extends FlxState
             {
 		FlxG.switchState(new WinState());
 		FlxG.sound.music.volume = 0;
+        trace('cheater >:]');
 	    });
 	}
         else if (FlxG.keys.justPressed.ESCAPE) 
@@ -91,9 +99,11 @@ class PlayState extends FlxState
     function click() {
         new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('click'));
+            updateText("Keep going!");
         });
     }
 
+    // may or may not have stolen code from flixel-demos
     function updateText(NewText:String):Void {
 	header.text = NewText;
     }
