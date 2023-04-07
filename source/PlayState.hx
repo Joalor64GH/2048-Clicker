@@ -66,14 +66,14 @@ class PlayState extends FlxState
             trace('winner winner!');
         }
 
-	if (win) 
-    {
+	if (win) {
             if (FlxG.keys.justPressed.W) 
 	    {
 	        FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
             	{
 		    FlxG.switchState(new WinState());
 		    FlxG.sound.music.volume = 0;
+		    trace('congratulations!');
 	        });
 	    }
         }
@@ -83,7 +83,7 @@ class PlayState extends FlxState
             {
 		FlxG.switchState(new WinState());
 		FlxG.sound.music.volume = 0;
-        trace('cheater >:]');
+        	trace('cheater >:]');
 	    });
 	}
         else if (FlxG.keys.justPressed.ESCAPE) 
