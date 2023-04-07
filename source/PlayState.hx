@@ -41,10 +41,10 @@ class PlayState extends FlxState
             add(winner);
         }
 
-	// placeholder code
-        num = new FlxSprite(Paths.image('one'));
-        num.screenCenter();
-        add(num);
+	// placeholder sprite code
+        var placeholder:FlxSprite = new FlxSprite(Paths.image('one'));
+        placeholder.screenCenter();
+        add(placeholder);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
