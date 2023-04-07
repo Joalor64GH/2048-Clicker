@@ -49,9 +49,9 @@ class PlayState extends FlxState
         clickAmount.screenCenter(X);
     	add(clickAmount);
 
-        num = new Number(0, 0, "one");
-        num.screenCenter();
-        add(num);
+        var placeholder:FlxSprite = new FlxSprite(Paths.image('numbers/default/1'));
+        placeholder.screenCenter();
+        add(placeholder);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
