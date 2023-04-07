@@ -51,7 +51,7 @@ class PlayState extends FlxState
     	add(clickAmount);
 
 	// placeholder sprite code
-        var placeholder:FlxSprite = new FlxSprite(Paths.image('numbers/default/one'));
+        var placeholder:FlxSprite = new FlxSprite(Paths.image('numbers/default/1'));
         placeholder.screenCenter();
         add(placeholder);
 
