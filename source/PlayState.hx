@@ -41,7 +41,8 @@ class PlayState extends FlxState
             add(winner);
         }
 
-        num = new Number(0, 0, "1");
+	// placeholder code
+        num = new FlxSprite(Paths.image('one'));
         num.screenCenter();
         add(num);
 
@@ -103,7 +104,6 @@ class PlayState extends FlxState
         });
     }
 
-    // may or may not have stolen code from flixel-demos
     function updateText(NewText:String):Void {
 	header.text = NewText;
     }
