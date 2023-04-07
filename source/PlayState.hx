@@ -134,7 +134,7 @@ class PlayState extends FlxState
                 updateText("It\'ll just go on forever.");
             if (clicks == 31 && clicks >= 36)
                 updateText("And ever...");
-            else if (clicks >= 38)
+            else if (clicks >= 37)
                 updateText("To infinity and beyond!!");
             updateClicks("Clicks: " + clicks);
         });
