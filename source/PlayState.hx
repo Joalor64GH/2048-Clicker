@@ -124,7 +124,7 @@ class PlayState extends FlxState
 	header.text = NewText;
     }
 
-    function updateClicks(NewText:String):Void {
-	clickAmount.text = NewText;
+    function updateClicks(mouseClicks:String):Void {
+	clickAmount.text = mouseClicks;
     }
 }
