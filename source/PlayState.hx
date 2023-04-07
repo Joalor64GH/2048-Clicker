@@ -26,8 +26,7 @@ class PlayState extends FlxState
     {
         super.create();
 
-        // text should change depending on what number you're on
-        // this uses the updateText function, same with clickAmount but with updateClicks
+        // the text updates using the updateText function, same with clickAmount but with updateClicks
         header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
         header.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
         add(header);
@@ -37,7 +36,7 @@ class PlayState extends FlxState
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
 	    
-        if (!win) {
+        if (clicks >= 38) {
 	    var winner:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
     	    winner.scrollFactor.set();
     	    winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -50,10 +49,9 @@ class PlayState extends FlxState
         clickAmount.screenCenter(X);
     	add(clickAmount);
 
-	// placeholder sprite code
-        var placeholder:FlxSprite = new FlxSprite(Paths.image('numbers/default/1'));
-        placeholder.screenCenter();
-        add(placeholder);
+        num = new Number(0, 0, "one");
+        num.screenCenter();
+        add(num);
 
         FlxG.sound.playMusic(Paths.music('game'), 1);
 
@@ -64,17 +62,16 @@ class PlayState extends FlxState
     {
         super.update(elapsed);
 
+        if (clicks >= 38) 
+        {
+            win = true;
+            trace('winner winner!');
+        }
+
         if (FlxG.mouse.justPressed) 
 	{
             click();
 	    clicks += 1;
-        }
-
-        // for testing purposes
-        if (FlxG.keys.justPressed.X) 
-        {
-            win = true;
-            trace('winner winner!');
         }
 
 	if (win) {
@@ -115,7 +112,30 @@ class PlayState extends FlxState
     function click() {
         new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('click'));
-            updateText("Keep going!");
+            if (clicks <= 10)
+                updateText("Keep going!");
+            if (clicks == 11 && clicks >= 12)
+                updateText("You made it!");
+            if (clicks == 12 && clicks >= 13)
+                updateText("Wait, what?");
+            if (clicks == 13 && clicks >= 14)
+                updateText("We\'re still going??");
+            if (clicks == 14 && clicks >= 15)
+                updateText("Okay then...");
+            if (clicks == 15 && clicks >= 19)
+                updateText("These numbers are HUGE!");
+            if (clicks == 20 && clicks >= 21)
+                updateText("ONE MILLION!?");
+            if (clicks == 21 && clicks >= 22)
+                updateText("Moving on to exponents!");
+            if (clicks == 22 && clicks >= 29)
+                updateText("The power of 2...!");
+            if (clicks == 30 && clicks >= 31)
+                updateText("It\'ll just go on forever.");
+            if (clicks == 31 && clicks >= 36)
+                updateText("And ever...");
+            else if (clicks >= 38)
+                updateText("To infinity and beyond!!");
             updateClicks("Clicks: " + clicks);
         });
     }
