@@ -8,7 +8,7 @@ class Number extends FlxSprite
 {
     public var num:String = 'one';
 
-    public function new(x:Float, y:Float)
+    public function new(x:Float, y:Float, ?num:String = "one"):Void
     {
 	super(x, y);
 	
@@ -44,7 +44,7 @@ class Number extends FlxSprite
 	    case "fivehundredtwelve":
 	        loadGraphic(Paths.image('numbers/default/512'));
 			
-	    case "thousandtwentyfour":
+	    case "onethousandtwentyfour":
 	        loadGraphic(Paths.image('numbers/default/1024'));
 	
 	    case "twothousandfourtyeight":
@@ -89,7 +89,7 @@ class Exponent extends FlxSprite
 {
     public var expo:String = 'twentyone';
 
-    public function new(x:Float, y:Float)
+    public function new(x:Float, y:Float, ?expo:String = "twentyone"):Void
     {
 	super(x, y);
 	    
