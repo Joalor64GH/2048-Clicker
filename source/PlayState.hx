@@ -14,15 +14,16 @@ class PlayState extends FlxState
 {
     var header:FlxText;
 
-    public static var num:Number;
-    public static var expo:Exponent;
-    public static var infinity:Infinity;
-    public static var win:Bool = false;
+    var num:Number;
+    var expo:Exponent;
+    var infinity:Infinity;
 
     var clicks:Int = 0;
     var clickAmount:FlxText;
 
     var winner:FlxText;
+
+    public static var win:Bool = false;
 
     override public function create()
     {
@@ -193,7 +194,7 @@ class PlayState extends FlxState
 	    {
 		FlxG.switchState(new MainMenuState());
 		FlxG.sound.music.volume = 0;
-        trace('returning to menu...');
+            trace('returning to menu...');
 	    });
         }
     }
@@ -226,7 +227,6 @@ class PlayState extends FlxState
             else if (clicks >= 38)
                 updateText("To infinity and beyond!!");
             updateClicks("Clicks: " + clicks);
-            trace('one click added');
         });
     }
 
