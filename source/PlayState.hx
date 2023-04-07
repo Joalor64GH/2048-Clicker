@@ -67,6 +67,7 @@ class PlayState extends FlxState
         if (FlxG.mouse.justPressed) 
 	{
             click();
+	    clicks += 1;
         }
 
         // for testing purposes
@@ -116,7 +117,6 @@ class PlayState extends FlxState
             FlxG.sound.play(Paths.sound('click'));
             updateText("Keep going!");
             updateClicks("Clicks: " + clicks);
-            clicks += 1;
         });
     }
 
