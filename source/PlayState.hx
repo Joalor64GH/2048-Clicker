@@ -101,7 +101,7 @@ class PlayState extends FlxState
         } 
         else if (clicks >= 21 && clicks <= 37) 
         {
-            if (clicks >= 20 && clicks <= 21)
+            if (clicks >= 20 && clicks <= 22)
                 expo = new Exponent(0, 0, "twentyone");
             else if (clicks == 22)
                 expo = new Exponent(0, 0, "twentytwo");
