@@ -13,15 +13,13 @@ import flixel.FlxState;
 class PlayState extends FlxState
 {
     var header:FlxText;
+    var clickAmount:FlxText;
 
     var num:Number;
     var expo:Exponent;
     var infinity:Infinity;
 
     var clicks:Int = 0;
-    var clickAmount:FlxText;
-
-    var winner:FlxText;
 
     public static var win:Bool = false;
 
@@ -29,7 +27,6 @@ class PlayState extends FlxState
     {
         super.create();
 
-        // the text updates using the updateText function, same with clickAmount but with updateClicks
         header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
         header.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
         add(header);
@@ -38,13 +35,6 @@ class PlayState extends FlxState
     	tip.scrollFactor.set();
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
-	    
-        winner = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
-    	winner.scrollFactor.set();
-    	winner.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        if (win) {
-            add(winner);
-        }
 
         clickAmount = new FlxText(5, FlxG.height - 24, 0, "Clicks: 0", 12);
     	clickAmount.scrollFactor.set();
@@ -225,7 +215,7 @@ class PlayState extends FlxState
             else if (clicks == 31 && clicks <= 37)
                 updateText("And ever...");
             else if (clicks >= 38)
-                updateText("To infinity and beyond!!");
+                updateText("To infinity and beyond!!\nPress W to win the game!");
             updateClicks("Clicks: " + clicks);
         });
     }
