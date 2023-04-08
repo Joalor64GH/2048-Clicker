@@ -6,9 +6,9 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 class Number extends FlxSprite
 {
-    public var num:String = 'one';
+    public var num:String;
 
-    public function new(x:Float, y:Float, ?num:String = "one"):Void
+    public function new(x:Float, y:Float, ?num:String):Void
     {
 	super(x, y);
 	
@@ -87,9 +87,9 @@ class Number extends FlxSprite
 
 class Exponent extends FlxSprite
 {
-    public var expo:String = 'twentyone';
+    public var expo:String;
 
-    public function new(x:Float, y:Float, ?expo:String = "twentyone"):Void
+    public function new(x:Float, y:Float, ?expo:String):Void
     {
 	super(x, y);
 	    
