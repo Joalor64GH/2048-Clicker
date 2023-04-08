@@ -1,13 +1,13 @@
-package;
-
 import flixel.FlxG;
 import flixel.FlxSprite;
 
+using StringTools;
+
 class Number extends FlxSprite
 {
-    public var num:String = 'one';
+    public var num:String = '';
 
-    public function new(x:Float, y:Float, ?num:String = "one"):Void {
+    public function new(x:Float, y:Float, num:String = "one"):Void {
 	super(x, y);
 	
 	switch(num)
@@ -85,9 +85,9 @@ class Number extends FlxSprite
 
 class Exponent extends FlxSprite
 {
-    public var expo:String = 'twentyone';
+    public var expo:String = '';
 
-    public function new(x:Float, y:Float, ?expo:String = "twentyone"):Void {
+    public function new(x:Float, y:Float, expo:String = "twentyone"):Void {
 	super(x, y);
 	    
 	switch(expo)
