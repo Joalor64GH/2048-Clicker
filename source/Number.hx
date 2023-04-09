@@ -1,7 +1,7 @@
+package;
+
 import flixel.FlxG;
 import flixel.FlxSprite;
-
-using StringTools;
 
 class Number extends FlxSprite
 {
@@ -159,23 +159,23 @@ class Infinity extends FlxSprite
 	var tex = Paths.getSparrowAtlas('numbers/infinity');
 	frames = tex;
 
-	animation.addByPrefix('R', 'red', 1, false);
-	animation.addByPrefix('SC', 'scarlet', 1, false);
-	animation.addByPrefix('O', 'orange', 1, false);
-	animation.addByPrefix('YO', 'yelloworange', 1, false);
-	animation.addByPrefix('Y', 'yellow', 1, false);
-	animation.addByPrefix('LI', 'lime', 1, false);
-	animation.addByPrefix('G', 'green', 1, false);
-	animation.addByPrefix('MI', 'mint', 1, false);
-	animation.addByPrefix('CY', 'cyan', 1, false);
-	animation.addByPrefix('SB', 'skyblue', 1, false);
-	animation.addByPrefix('B', 'blue', 1, false);
-	animation.addByPrefix('RP', 'royalpurple', 1, false);
-	animation.addByPrefix('P', 'purple', 1, false);
-	animation.addByPrefix('WHAT', 'this', 1, false);
-	animation.addByPrefix('MG', 'magenta', 1, false);
-	animation.addByPrefix('HP', 'hotpink', 1, false);
-	animation.addByPrefix('LOOP', 'loop', 1, false);
+	animation.addByPrefix('R', "red", 1, false);
+	animation.addByPrefix('SC', "scarlet", 1, false);
+	animation.addByPrefix('O', "orange", 1, false);
+	animation.addByPrefix('YO', "yelloworange", 1, false);
+	animation.addByPrefix('Y', "yellow", 1, false);
+	animation.addByPrefix('LI', "lime", 1, false);
+	animation.addByPrefix('G', "green", 1, false);
+	animation.addByPrefix('MI', "mint", 1, false);
+	animation.addByPrefix('CY', "cyan", 1, false);
+	animation.addByPrefix('SB', "skyblue", 1, false);
+	animation.addByPrefix('B', "blue", 1, false);
+	animation.addByPrefix('RP', "royalpurple", 1, false);
+	animation.addByPrefix('P', "purple", 1, false);
+	animation.addByPrefix('WHAT', "this", 1, false);
+	animation.addByPrefix('MG', "magenta", 1, false);
+	animation.addByPrefix('HP', "hotpink", 1, false);
+	animation.addByPrefix('LOOP', "loop", 1, false);
     }
 
     override public function update(elapsed:Float):Void

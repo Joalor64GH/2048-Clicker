@@ -13,13 +13,13 @@ import flixel.FlxState;
 class PlayState extends FlxState
 {
     var header:FlxText;
-    var clickAmount:FlxText;
 
     var num:Number;
     var expo:Exponent;
     var infinity:Infinity;
 
     var clicks:Int = 0;
+    var clickAmount:FlxText;
 
     public static var win:Bool = false;
 
