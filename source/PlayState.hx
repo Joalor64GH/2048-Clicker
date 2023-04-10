@@ -36,7 +36,7 @@ class PlayState extends FlxState
     	tip.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(tip);
 
-        clickAmount = new FlxText(5, FlxG.height - 24, 0, "Clicks: 0", 12);
+        clickAmount = new FlxText(5, FlxG.height - 24, 0, "Clicks: " + clicks, 12);
     	clickAmount.scrollFactor.set();
     	clickAmount.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         clickAmount.screenCenter(X);
@@ -56,44 +56,64 @@ class PlayState extends FlxState
             if (clicks == 0)
                 num = new Number(0, 0, "one");
             else if (clicks == 1)
+                remove(num);
                 num = new Number(0, 0, "two");
             else if (clicks == 2)
+                remove(num);
                 num = new Number(0, 0, "four");
             else if (clicks == 3)
+                remove(num);
                 num = new Number(0, 0, "eight");
             else if (clicks == 4)
+                remove(num);
                 num = new Number(0, 0, "sixteen");
             else if (clicks == 5)
+                remove(num);
                 num = new Number(0, 0, "thirtytwo");
             else if (clicks == 6)
+                remove(num);
                 num = new Number(0, 0, "sixtyfour");
             else if (clicks == 7)
+                remove(num);
                 num = new Number(0, 0, "onehundredtwentyeight");
             else if (clicks == 8)
+                remove(num);
                 num = new Number(0, 0, "twohundredfiftysix");
             else if (clicks == 9)
+                remove(num);
                 num = new Number(0, 0, "fivehundredtwelve");
             else if (clicks == 10)
+                remove(num);
                 num = new Number(0, 0, "onethousandtwentyfour");
             else if (clicks == 11)
+                remove(num);
                 num = new Number(0, 0, "twothousandfourtyeight");
             else if (clicks == 12)
+                remove(num);
                 num = new Number(0, 0, "fourthousandninetysix");
             else if (clicks == 13)
+                remove(num);
                 num = new Number(0, 0, "eightthousandonehundredninetytwo");
             else if (clicks == 14)
+                remove(num);
                 num = new Number(0, 0, "sixteenthousandthreehundredeightyfour");
             else if (clicks == 15)
+                remove(num);
                 num = new Number(0, 0, "thirtytwothousandsevenhundredsixtyeight");
             else if (clicks == 16)
+                remove(num);
                 num = new Number(0, 0, "sixtyfivethousandfivehundredthirtysix");
             else if (clicks == 17)
+                remove(num);
                 num = new Number(0, 0, "onehundredthirtyonethousandseventytwo");
             else if (clicks == 18)
+                remove(num);
                 num = new Number(0, 0, "twohundredsixtytwothousandonehundredfourtyfour");
             else if (clicks == 19)
+                remove(num);
                 num = new Number(0, 0, "fivehundredtwentyfourthousandtwohundredeightyeight");
             else if (clicks == 20)
+                remove(num);
                 num = new Number(0, 0, "onemillionfourtyeighthousandfivehundredseventysix");
             num.screenCenter();
             add(num);
@@ -101,38 +121,55 @@ class PlayState extends FlxState
         else if (clicks >= 21 && clicks <= 37) 
         {
             if (clicks == 21)
+                remove(num);
                 expo = new Exponent(0, 0, "twentyone");
             else if (clicks == 22)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentytwo");
             else if (clicks == 23)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentythree");
             else if (clicks == 24)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentyfour");
             else if (clicks == 25)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentyfive");
             else if (clicks == 26)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentysix");
             else if (clicks == 27)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentyseven");
             else if (clicks == 28)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentyeight");
             else if (clicks == 29)
+                remove(expo)
                 expo = new Exponent(0, 0, "twentynine");
             else if (clicks == 30)
+                remove(expo);
                 expo = new Exponent(0, 0, "thirty");
             else if (clicks == 31)
+                remove(expo);
                 expo = new Exponent(0, 0, "fourty");
             else if (clicks == 32)
+                remove(expo);
                 expo = new Exponent(0, 0, "fifty");
             else if (clicks == 33)
+                remove(expo);
                 expo = new Exponent(0, 0, "sixty");
             else if (clicks == 34)
+                remove(expo);
                 expo = new Exponent(0, 0, "seventy");
             else if (clicks == 35)
+                remove(expo);
                 expo = new Exponent(0, 0, "eighty");
             else if (clicks == 36)
+                remove(expo);
                 expo = new Exponent(0, 0, "ninety");
             else if (clicks == 37)
+                remove(expo);
                 expo = new Exponent(0, 0, "onehundred");
             expo.screenCenter();
             add(expo);
@@ -140,10 +177,10 @@ class PlayState extends FlxState
         } 
         else if (clicks >= 38) 
         {
+            remove(expo);
             infinity = new Infinity(0, 0);
             infinity.screenCenter();
             add(infinity);
-            remove(expo);
         }
 
         if (clicks >= 38) 
@@ -158,7 +195,8 @@ class PlayState extends FlxState
 	    clicks += 1;
         }
 
-	if (win) {
+	if (win) 
+    {
             if (FlxG.keys.justPressed.W) 
 	    {
 	        FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
@@ -189,8 +227,10 @@ class PlayState extends FlxState
         }
     }
 
-    function click() {
-        new FlxTimer().start(0.01, function(timer) {
+    function click() 
+    {
+        new FlxTimer().start(0.01, function(timer) 
+        {
             FlxG.sound.play(Paths.sound('click'));
             if (clicks <= 10)
                 updateText("Keep going!");
