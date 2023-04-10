@@ -42,88 +42,88 @@ class PlayState extends FlxState
         clickAmount.screenCenter(X);
     	add(clickAmount);
 
-        if (clicks <= 21) 
+        if (clicks <= 21 && clicks <= 37) 
         {
-            if (clicks == 0)
+            if (clicks == 0 && clicks <= 1)
                 num = new Number(0, 0, "one");
-            else if (clicks == 1)
+            else if (clicks == 1 && clicks <= 2)
                 num = new Number(0, 0, "two");
-            else if (clicks == 2)
+            else if (clicks == 2 && clicks <= 3)
                 num = new Number(0, 0, "four");
-            else if (clicks == 3)
+            else if (clicks == 3 && clicks <= 4)
                 num = new Number(0, 0, "eight");
-            else if (clicks == 4)
+            else if (clicks == 4 && clicks <= 5)
                 num = new Number(0, 0, "sixteen");
-            else if (clicks == 5)
+            else if (clicks == 5 && clicks <= 6)
                 num = new Number(0, 0, "thirtytwo");
-            else if (clicks == 6)
+            else if (clicks == 6 && clicks <= 7)
                 num = new Number(0, 0, "sixtyfour");
-            else if (clicks == 7)
+            else if (clicks == 7 && clicks <= 8)
                 num = new Number(0, 0, "onehundredtwentyeight");
-            else if (clicks == 8)
+            else if (clicks == 8 && clicks <= 9)
                 num = new Number(0, 0, "twohundredfiftysix");
-            else if (clicks == 9)
+            else if (clicks == 9 && clicks <= 10)
                 num = new Number(0, 0, "fivehundredtwelve");
-            else if (clicks == 10)
+            else if (clicks == 10 && clicks <= 11)
                 num = new Number(0, 0, "onethousandtwentyfour");
-            else if (clicks == 11)
+            else if (clicks == 11 && clicks <= 12)
                 num = new Number(0, 0, "twothousandfourtyeight");
-            else if (clicks == 12)
+            else if (clicks == 12 && clicks <= 13)
                 num = new Number(0, 0, "fourthousandninetysix");
-            else if (clicks == 13)
+            else if (clicks == 13 && clicks <= 14)
                 num = new Number(0, 0, "eightthousandonehundredninetytwo");
-            else if (clicks == 14)
+            else if (clicks == 14 && clicks <= 15)
                 num = new Number(0, 0, "sixteenthousandthreehundredeightyfour");
-            else if (clicks == 15)
+            else if (clicks == 15 && clicks <= 16)
                 num = new Number(0, 0, "thirtytwothousandsevenhundredsixtyeight");
-            else if (clicks == 16)
+            else if (clicks == 16 && clicks <= 17)
                 num = new Number(0, 0, "sixtyfivethousandfivehundredthirtysix");
-            else if (clicks == 17)
+            else if (clicks == 17 && clicks <= 18)
                 num = new Number(0, 0, "onehundredthirtyonethousandseventytwo");
-            else if (clicks == 18)
+            else if (clicks == 18 && clicks <= 19)
                 num = new Number(0, 0, "twohundredsixtytwothousandonehundredfourtyfour");
-            else if (clicks == 19)
+            else if (clicks == 19 && clicks <= 20)
                 num = new Number(0, 0, "fivehundredtwentyfourthousandtwohundredeightyeight");
-            else if (clicks == 20)
+            else if (clicks == 20 && clicks <= 21)
                 num = new Number(0, 0, "onemillionfourtyeighthousandfivehundredseventysix");
             num.screenCenter();
             add(num);
         } 
         else if (clicks >= 21 && clicks <= 37) 
         {
-            if (clicks == 21)
+            if (clicks == 21 && clicks <= 22)
                 expo = new Exponent(0, 0, "twentyone");
-            else if (clicks == 22)
+            else if (clicks == 22 && clicks <= 23)
                 expo = new Exponent(0, 0, "twentytwo");
-            else if (clicks == 23)
+            else if (clicks == 23 && clicks <= 24)
                 expo = new Exponent(0, 0, "twentythree");
-            else if (clicks == 24)
+            else if (clicks == 24 && clicks <= 25)
                 expo = new Exponent(0, 0, "twentyfour");
-            else if (clicks == 25)
+            else if (clicks == 25 && clicks <= 26)
                 expo = new Exponent(0, 0, "twentyfive");
-            else if (clicks == 26)
+            else if (clicks == 26 && clicks <= 27)
                 expo = new Exponent(0, 0, "twentysix");
-            else if (clicks == 27)
+            else if (clicks == 27 && clicks <= 28)
                 expo = new Exponent(0, 0, "twentyseven");
-            else if (clicks == 28)
+            else if (clicks == 28 && clicks <= 29)
                 expo = new Exponent(0, 0, "twentyeight");
-            else if (clicks == 29)
+            else if (clicks == 29 && clicks <= 30)
                 expo = new Exponent(0, 0, "twentynine");
-            else if (clicks == 30)
+            else if (clicks == 30 && clicks <= 31)
                 expo = new Exponent(0, 0, "thirty");
-            else if (clicks == 31)
+            else if (clicks == 31 && clicks <= 32)
                 expo = new Exponent(0, 0, "fourty");
-            else if (clicks == 32)
+            else if (clicks == 32 && clicks <= 33)
                 expo = new Exponent(0, 0, "fifty");
-            else if (clicks == 33)
+            else if (clicks == 33 && clicks <= 34)
                 expo = new Exponent(0, 0, "sixty");
-            else if (clicks == 34)
+            else if (clicks == 34 && clicks <= 35)
                 expo = new Exponent(0, 0, "seventy");
-            else if (clicks == 35)
+            else if (clicks == 35 && clicks <= 36)
                 expo = new Exponent(0, 0, "eighty");
-            else if (clicks == 36)
+            else if (clicks == 36 && clicks <= 37)
                 expo = new Exponent(0, 0, "ninety");
-            else if (clicks == 37)
+            else if (clicks == 37 && clicks <= 38)
                 expo = new Exponent(0, 0, "onehundred");
             expo.screenCenter();
             add(expo);

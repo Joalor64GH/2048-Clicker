@@ -5,18 +5,14 @@ import flixel.FlxG;
 
 class BSODState extends FlxState
 {
-    var bsod:FlxSprite;
-
-    public function new()
-    {
+    public function new() {
         super();
     }
 
-    override public function create()
-    {
+    override public function create() {
         super.create();
 
-        bsod = new FlxSprite(-80).loadGraphic(Paths.image('bluescreen'));
+        var bsod:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('bluescreen'));
 	bsod.scrollFactor.x = 0;
 	bsod.scrollFactor.y = 0.18;
 	bsod.setGraphicSize(Std.int(bsod.width * 1));
@@ -27,10 +23,8 @@ class BSODState extends FlxState
 
         FlxG.sound.play(Paths.sound('bsod'));
 
-        new FlxTimer().start(4, closeGame);
-    }
-
-    public function closeGame(time:FlxTimer = null) {
-        Sys.exit(0);
+        new FlxTimer().start(4, function(time:FlxTimer = null) {
+            Sys.exit(0);
+        });
     }
 }
