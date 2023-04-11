@@ -9,7 +9,7 @@ class Number extends FlxSprite
     public var num:String = '';
 
     public function new(x:Float, y:Float, num:String = "one"):Void 
-	{
+    {
 	super(x, y);
 	
 	switch(num)
@@ -90,7 +90,7 @@ class Exponent extends FlxSprite
     public var expo:String = '';
 
     public function new(x:Float, y:Float, expo:String = "twentyone"):Void 
-	{
+    {
 	super(x, y);
 	    
 	switch(expo)
@@ -157,7 +157,7 @@ class Exponent extends FlxSprite
 class Infinity extends FlxSprite
 {
     public function new(x:Float, y:Float) 
-	{
+    {
 	super(x, y);
 
 	frames = Paths.getSparrowAtlas('numbers/infinity');
@@ -165,7 +165,7 @@ class Infinity extends FlxSprite
 	animation.addByPrefix('infinity', "infinity0", 12);
     }
 
-	override function update(elapsed:Float)
+    override function update(elapsed:Float)
     {
         super.update(elapsed);
 
