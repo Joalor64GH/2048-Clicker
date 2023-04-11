@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="infinity.png">
-    <SubTexture name="infinity infinity00000" x="220" y="435" width="220" height="86" frameX="-16" frameY="-45" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00001" x="0" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00002" x="0" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00003" x="220" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00004" x="220" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00005" x="0" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00006" x="220" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00007" x="0" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00008" x="220" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00009" x="0" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00010" x="220" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00011" x="440" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00012" x="440" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00013" x="440" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00014" x="440" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00015" x="440" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
-    <SubTexture name="infinity infinity00016" x="0" y="435" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0000" x="220" y="435" width="220" height="86" frameX="-16" frameY="-45" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0001" x="0" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0002" x="0" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0003" x="220" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0004" x="220" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0005" x="0" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0006" x="220" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0007" x="0" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0008" x="220" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0009" x="0" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0010" x="220" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0011" x="440" y="0" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0012" x="440" y="87" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0013" x="440" y="174" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0014" x="440" y="261" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0015" x="440" y="348" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
+    <SubTexture name="infinity0016" x="0" y="435" width="220" height="87" frameX="-16" frameY="-44" frameWidth="250" frameHeight="170" />
 </TextureAtlas>
