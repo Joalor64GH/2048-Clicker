@@ -26,6 +26,8 @@ class PlayState extends FlxState
     override public function create()
     {
         super.create();
+	
+	trace('game started!');
 
         header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
         header.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
@@ -118,8 +120,7 @@ class PlayState extends FlxState
             }
             num.screenCenter();
             add(num);
-        } 
-        else if (clicks >= 21 && clicks <= 37) {
+        } else if (clicks >= 21 && clicks <= 37) {
             if (clicks == 21) {
                 remove(num);
                 expo = new Exponent(0, 0, "twentyone");
@@ -175,8 +176,7 @@ class PlayState extends FlxState
             expo.screenCenter();
             add(expo);
             remove(num);
-        } 
-        else if (clicks >= 38) {
+        } else if (clicks >= 38) {
             remove(expo);
             infinity = new Infinity(0, 0);
             infinity.screenCenter();
@@ -196,7 +196,7 @@ class PlayState extends FlxState
         }
 
 	if (win) 
-    {
+    	{
             if (FlxG.keys.justPressed.W) 
 	    {
 	        FlxG.camera.fade(FlxColor.BLACK, 0.33, false, function() 
@@ -227,10 +227,8 @@ class PlayState extends FlxState
         }
     }
 
-    function click() 
-    {
-        new FlxTimer().start(0.01, function(timer) 
-        {
+    function click() {
+        new FlxTimer().start(0.01, function(timer) {
             FlxG.sound.play(Paths.sound('click'));
             if (clicks <= 10)
                 updateText("Keep going!");
@@ -262,9 +260,11 @@ class PlayState extends FlxState
 
     function updateText(NewText:String):Void {
 	header.text = NewText;
+	trace('text updated');
     }
 
     function updateClicks(mouseClicks:String):Void {
 	clickAmount.text = mouseClicks;
+	trace('+1 click added');
     }
 }
