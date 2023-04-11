@@ -49,6 +49,8 @@
 	<haxelib name="flixel-ui" />
 	<haxelib name="flixel-tools" />
 
+	<haxelib name="hxcpp-debug-server" if="desktop debug" />
+
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
 	<!--Enable the Flixel core recording system-->
