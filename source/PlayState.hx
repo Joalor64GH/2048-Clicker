@@ -145,7 +145,7 @@ class PlayState extends FlxState
                 remove(expo);
                 expo = new Exponent(0, 0, "twentyeight");
             } else if (clicks == 29) {
-                remove(expo)
+                remove(expo);
                 expo = new Exponent(0, 0, "twentynine");
             } else if (clicks == 30) {
                 remove(expo);

@@ -2,12 +2,14 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.graphics.frames.FlxAtlasFrames;
 
 class Number extends FlxSprite
 {
     public var num:String = '';
 
-    public function new(x:Float, y:Float, num:String = "one"):Void {
+    public function new(x:Float, y:Float, num:String = "one"):Void 
+	{
 	super(x, y);
 	
 	switch(num)
@@ -87,7 +89,8 @@ class Exponent extends FlxSprite
 {
     public var expo:String = '';
 
-    public function new(x:Float, y:Float, expo:String = "twentyone"):Void {
+    public function new(x:Float, y:Float, expo:String = "twentyone"):Void 
+	{
 	super(x, y);
 	    
 	switch(expo)
@@ -153,33 +156,15 @@ class Exponent extends FlxSprite
 
 class Infinity extends FlxSprite
 {
-    public function new(x:Float, y:Float) {
+    public function new(x:Float, y:Float) 
+	{
 	super(x, y);
 
-	var tex = Paths.getSparrowAtlas('numbers/infinity');
-	frames = tex;
+	frames = Paths.getSparrowAtlas('numbers/infinity');
 
-	animation.addByPrefix('R', "red", 1, false);
-	animation.addByPrefix('SC', "scarlet", 1, false);
-	animation.addByPrefix('O', "orange", 1, false);
-	animation.addByPrefix('YO', "yelloworange", 1, false);
-	animation.addByPrefix('Y', "yellow", 1, false);
-	animation.addByPrefix('LI', "lime", 1, false);
-	animation.addByPrefix('G', "green", 1, false);
-	animation.addByPrefix('MI', "mint", 1, false);
-	animation.addByPrefix('CY', "cyan", 1, false);
-	animation.addByPrefix('SB', "skyblue", 1, false);
-	animation.addByPrefix('B', "blue", 1, false);
-	animation.addByPrefix('RP', "royalpurple", 1, false);
-	animation.addByPrefix('P', "purple", 1, false);
-	animation.addByPrefix('WHAT', "this", 1, false);
-	animation.addByPrefix('MG', "magenta", 1, false);
-	animation.addByPrefix('HP', "hotpink", 1, false);
-	animation.addByPrefix('LOOP', "loop", 1, false);
-    }
+	animation.addByPrefix('infinity', "infinity0", 12);
 
-    override public function update(elapsed:Float):Void
-    {
-        super.update(elapsed);
+		animation.play();
+		updateHitbox();
     }
 }
