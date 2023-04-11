@@ -168,7 +168,7 @@ class Infinity extends FlxSprite
 		updateHitbox();
     }
 
-	inline public function playAnimation(name:String, ?forced:Bool, ?reverse:Bool, ?frame:Int):Void{
-        animation.play(name, forced, reverse, frame);
+	inline public function playAnim(AnimName:String, Force:Bool, Reversed:Bool, Frame:Int):Void{
+        animation.play(AnimName, Force, Reversed, Frame);
     }
 }
