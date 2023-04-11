@@ -162,7 +162,7 @@ class Infinity extends FlxSprite
 
 	frames = Paths.getSparrowAtlas('numbers/infinity');
 
-	animation.addByPrefix('infinity', "infinity0", 12);
+	animation.addByPrefix('infinity', "infinity", 12);
     }
 
     override function update(elapsed:Float)

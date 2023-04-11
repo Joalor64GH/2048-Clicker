@@ -56,6 +56,7 @@ class PlayState extends FlxState
         if (clicks <= 21) 
         {
             if (clicks == 0) {
+                remove(num);
                 num = new Number(0, 0, "one");
             } else if (clicks == 1) {
                 remove(num);
@@ -121,8 +122,9 @@ class PlayState extends FlxState
             num.screenCenter();
             add(num);
         } else if (clicks >= 21 && clicks <= 37) {
+            remove(num);
             if (clicks == 21) {
-                remove(num);
+                remove(expo);
                 expo = new Exponent(0, 0, "twentyone");
             } else if (clicks == 22) {
                 remove(expo);
@@ -175,12 +177,12 @@ class PlayState extends FlxState
             }
             expo.screenCenter();
             add(expo);
-            remove(num);
         } else if (clicks >= 38) {
             remove(expo);
             infinity = new Infinity(0, 0);
             infinity.screenCenter();
             add(infinity);
+            trace('buzz lightyear');
         }
 
         if (clicks >= 38) 
@@ -260,11 +262,9 @@ class PlayState extends FlxState
 
     function updateText(NewText:String):Void {
 	header.text = NewText;
-	trace('text updated');
     }
 
     function updateClicks(mouseClicks:String):Void {
 	clickAmount.text = mouseClicks;
-	trace('+1 click added');
     }
 }
