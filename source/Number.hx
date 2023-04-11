@@ -163,12 +163,12 @@ class Infinity extends FlxSprite
 	frames = Paths.getSparrowAtlas('numbers/infinity');
 
 	animation.addByPrefix('infinity', "infinity0", 12);
-
-		animation.play();
-		updateHitbox();
     }
 
-	inline public function playAnim(AnimName:String, Force:Bool, Reversed:Bool, Frame:Int):Void{
-        animation.play(AnimName, Force, Reversed, Frame);
+	override function update(elapsed:Float)
+    {
+        super.update(elapsed);
+
+        animation.play("infinity");
     }
 }
