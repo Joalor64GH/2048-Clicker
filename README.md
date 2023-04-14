@@ -8,3 +8,4 @@
 2048, but it's a clicker game.
 
 Check out the controls in `assets/data/controls.txt`.
+</div>
