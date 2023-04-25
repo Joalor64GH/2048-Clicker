@@ -179,7 +179,8 @@ class PlayState extends FlxState
             add(expo);
         } else if (clicks >= 38) {
             remove(expo);
-            infinity = new Infinity(0, 0);
+            infinity = new Infinity(0, 0, "infinity");
+            infinity.playAnimation("infinity");
             infinity.screenCenter();
             add(infinity);
         }
@@ -187,8 +188,7 @@ class PlayState extends FlxState
         if (clicks >= 38) 
         {
             win = true;
-            trace('winner winner!');
-            trace('win = true');
+            addWinText();
         }
 
         if (FlxG.mouse.justPressed) 
@@ -255,9 +255,16 @@ class PlayState extends FlxState
             else if (clicks == 31 && clicks <= 37)
                 updateText("And ever...");
             else if (clicks >= 38)
-                updateText("To infinity and beyond!!\nPress W to win the game!");
+                updateText("To infinity and beyond!!");
             updateClicks("Clicks: " + clicks);
         });
+    }
+
+    function addWinText() {
+	    var winnerText:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game", 12);
+    	winnerText.scrollFactor.set();
+    	winnerText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    	add(winnerText);
     }
 
     function updateText(NewText:String):Void {

@@ -2,7 +2,6 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.graphics.frames.FlxAtlasFrames;
 
 class Number extends FlxSprite
 {
@@ -156,19 +155,26 @@ class Exponent extends FlxSprite
 
 class Infinity extends FlxSprite
 {
-    public function new(x:Float, y:Float) 
+	public var uselessString:String = '';
+
+    public function new(x:Float, y:Float, uselessString:String = "infinity"):Void
     {
 	super(x, y);
 
-	frames = Paths.getSparrowAtlas('numbers/infinity');
-
-	animation.addByPrefix('infinity', "infinity", 48);
+	switch(uselessString) 
+	{
+		case 'infinity':
+			frames = Paths.getSparrowAtlas('numbers/infinity');
+			animation.addByPrefix('infinity', "infinity", 48);
+	}
     }
 
     override function update(elapsed:Float)
     {
         super.update(elapsed);
+    }
 
-        animation.play("infinity");
+	inline public function playAnimation(name:String, ?forced:Bool, ?reverse:Bool, ?frame:Int):Void {
+        animation.play(name, forced, reverse, frame);
     }
 }
