@@ -155,7 +155,7 @@ class Exponent extends FlxSprite
 
 class Infinity extends FlxSprite
 {
-	public var uselessString:String = '';
+    public var uselessString:String = '';
 
     public function new(x:Float, y:Float, uselessString:String = "infinity"):Void
     {
@@ -163,9 +163,9 @@ class Infinity extends FlxSprite
 
 	switch(uselessString) 
 	{
-		case 'infinity':
-			frames = Paths.getSparrowAtlas('numbers/infinity');
-			animation.addByPrefix('infinity', "infinity", 48);
+	    case 'infinity':
+		frames = Paths.getSparrowAtlas('numbers/infinity');
+		animation.addByPrefix('infinity', "infinity", 48);
 	}
     }
 
@@ -174,7 +174,7 @@ class Infinity extends FlxSprite
         super.update(elapsed);
     }
 
-	inline public function playAnimation(name:String, ?forced:Bool, ?reverse:Bool, ?frame:Int):Void {
+    inline public function playAnimation(name:String, ?forced:Bool, ?reverse:Bool, ?frame:Int):Void {
         animation.play(name, forced, reverse, frame);
     }
 }
