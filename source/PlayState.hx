@@ -121,7 +121,7 @@ class PlayState extends FlxState
             }
             num.screenCenter();
             add(num);
-        } else if (clicks >= 21) {
+        } else if (clicks <= 38) {
             remove(num);
             if (clicks == 21) {
                 trace('exponent time!!');
@@ -261,7 +261,7 @@ class PlayState extends FlxState
     }
 
     function addWinText() {
-	    var winnerText:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game", 12);
+	var winnerText:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game", 12);
     	winnerText.scrollFactor.set();
     	winnerText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(winnerText);
