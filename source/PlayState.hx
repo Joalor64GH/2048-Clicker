@@ -22,6 +22,7 @@ class PlayState extends FlxState
     var clickAmount:FlxText;
 
     public static var win:Bool = false;
+    public static var cheated:Bool = false;
 
     override public function create()
     {
@@ -29,7 +30,7 @@ class PlayState extends FlxState
 	
 	trace('game started!');
 
-        header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply by 2!", 32);
+        header = new FlxText(0, 0, FlxG.width, "Click on the number to multiply it by 2!", 32);
         header.setFormat(Paths.font("vcr.ttf"), 25, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
         add(header);
 
@@ -121,10 +122,11 @@ class PlayState extends FlxState
             }
             num.screenCenter();
             add(num);
-        } else if (clicks <= 38) {
+        } else if (clicks <= 38 && clicks >= 21) {
             remove(num);
             if (clicks == 21) {
-                trace('exponent time!!');
+                remove(num);
+                remove(expo);
                 expo = new Exponent(0, 0, "twentyone");
             } else if (clicks == 22) {
                 remove(expo);
@@ -216,6 +218,7 @@ class PlayState extends FlxState
 		FlxG.switchState(new WinState());
 		FlxG.sound.music.volume = 0;
         	trace('cheater >:]');
+            cheated = true;
 	    });
 	}
         else if (FlxG.keys.justPressed.ESCAPE) 
@@ -261,7 +264,7 @@ class PlayState extends FlxState
     }
 
     function addWinText() {
-	var winnerText:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game", 12);
+	var winnerText:FlxText = new FlxText(5, FlxG.height - 44, 0, "Press W to win the game!", 12);
     	winnerText.scrollFactor.set();
     	winnerText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(winnerText);
