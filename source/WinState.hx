@@ -52,7 +52,7 @@ class WinState extends FlxState
     }
 
     function addCheaterText() {
-	    var cheaterText:FlxText = new FlxText(5, FlxG.height - 44, 0, "but you cheated lmao", 12);
+	var cheaterText:FlxText = new FlxText(5, FlxG.height - 44, 0, "but you cheated lmao", 12);
     	cheaterText.scrollFactor.set();
     	cheaterText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     	add(cheaterText);
