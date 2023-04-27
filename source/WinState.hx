@@ -31,7 +31,7 @@ class WinState extends FlxState
 	add(DisplayText);
 
     if (PlayState.cheated)
-        addCheaterText();
+        addCheatText();
 
         FlxG.sound.play(Paths.sound('win'));
 
@@ -50,7 +50,7 @@ class WinState extends FlxState
 	    });
         }
 
-        function addCheaterText() {
+        function addCheatText() {
 	    var cheaterText:FlxText = new FlxText(5, FlxG.height - 44, 0, "but you cheated lmao", 12);
     	cheaterText.scrollFactor.set();
     	cheaterText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
