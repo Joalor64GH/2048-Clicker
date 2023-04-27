@@ -1,5 +1,6 @@
 package;
 
+import PlayState;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxSprite;
@@ -29,9 +30,8 @@ class WinState extends FlxState
 	DisplayText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 	add(DisplayText);
 
-	if (PlayState.cheated) {
+	if (PlayState.cheated)
             addCheaterText();
-	}
 
         FlxG.sound.play(Paths.sound('win'));
 
@@ -49,12 +49,12 @@ class WinState extends FlxState
 		FlxG.switchState(new MainMenuState());
 	    });
         }
+    }
 
-        function addCheaterText() {
+    function addCheaterText() {
 	    var cheaterText:FlxText = new FlxText(5, FlxG.height - 44, 0, "but you cheated lmao", 12);
-    	    cheaterText.scrollFactor.set();
-    	    cheaterText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-    	    add(cheaterText);
-        }
+    	cheaterText.scrollFactor.set();
+    	cheaterText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    	add(cheaterText);
     }
 }
