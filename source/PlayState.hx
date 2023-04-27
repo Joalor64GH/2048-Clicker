@@ -218,7 +218,7 @@ class PlayState extends FlxState
 		FlxG.switchState(new WinState());
 		FlxG.sound.music.volume = 0;
         	trace('cheater >:]');
-            cheated = true;
+            	cheated = true;
 	    });
 	}
         else if (FlxG.keys.justPressed.ESCAPE) 
