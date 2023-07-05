@@ -14,7 +14,7 @@ class PlayState extends FlxState
 {
     var num:Number;
     var expo:Exponent;
-    var infinity:FlxSprite; // made it it's own sprite cause idk
+    var infinity:FlxSprite; // made it its own sprite cause idk
 
     var clicks:Int = 0;
     var clickAmount:FlxText;
