@@ -180,7 +180,7 @@ class PlayState extends FlxState
         } else if (clicks >= 37 && clicks >= 38) {
             remove(expo);
             infinity = new FlxSprite(0, 0);
-            infinity.frames(Paths.getSparrowAtlas("numbers/infinity"));
+            infinity.frames = Paths.getSparrowAtlas("numbers/infinity");
             infinity.animation.addByPrefix('rainbow', 'infinity', 24);
 	    infinity.animation.play('rainbow');
             infinity.screenCenter();
