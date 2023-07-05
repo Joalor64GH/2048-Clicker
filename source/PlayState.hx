@@ -12,14 +12,13 @@ import flixel.FlxState;
 
 class PlayState extends FlxState
 {
-    var header:FlxText;
-
     var num:Number;
     var expo:Exponent;
-    var infinity:Infinity;
+    var infinity:FlxSprite; // made it it's own sprite cause idk
 
     var clicks:Int = 0;
     var clickAmount:FlxText;
+    var header:FlxText;
 
     public static var win:Bool = false;
     public static var cheated:Bool = false;
@@ -122,11 +121,10 @@ class PlayState extends FlxState
             }
             num.screenCenter();
             add(num);
-        } else if (clicks <= 38 && clicks >= 21) {
+        } else if (clicks <= 38 && clicks >= 20) {
             remove(num);
             if (clicks == 21) {
                 remove(num);
-                remove(expo);
                 expo = new Exponent(0, 0, "twentyone");
             } else if (clicks == 22) {
                 remove(expo);
@@ -179,10 +177,12 @@ class PlayState extends FlxState
             }
             expo.screenCenter();
             add(expo);
-        } else if (clicks >= 38) {
+        } else if (clicks >= 37 && clicks >= 38) {
             remove(expo);
-            infinity = new Infinity(0, 0, "infinity");
-            infinity.playAnimation("infinity");
+            infinity = new FlxSprite(0, 0);
+            infinity.frames(Paths.getSparrowAtlas("numbers/infinity"));
+            logoBl.animation.addByPrefix('rainbow', 'infinity', 24);
+		    logoBl.animation.play('rainbow');
             infinity.screenCenter();
             add(infinity);
         }

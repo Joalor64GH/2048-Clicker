@@ -7,8 +7,7 @@ class Number extends FlxSprite
 {
     public var num:String = '';
 
-    public function new(x:Float, y:Float, num:String = "one"):Void 
-    {
+    public function new(x:Float, y:Float, num:String = "one"):Void {
 	super(x, y);
 	
 	switch(num)
@@ -78,8 +77,7 @@ class Number extends FlxSprite
 	}
     }
 			
-    override public function update(elapsed:Float):Void
-    {
+    override public function update(elapsed:Float):Void {
         super.update(elapsed);
     }
 }
@@ -88,8 +86,7 @@ class Exponent extends FlxSprite
 {
     public var expo:String = '';
 
-    public function new(x:Float, y:Float, expo:String = "twentyone"):Void 
-    {
+    public function new(x:Float, y:Float, expo:String = "twentyone"):Void {
 	super(x, y);
 	    
 	switch(expo)
@@ -147,34 +144,7 @@ class Exponent extends FlxSprite
 	}
     }
 			
-    override public function update(elapsed:Float):Void
-    {
+    override public function update(elapsed:Float):Void {
         super.update(elapsed);
-    }
-}
-
-class Infinity extends FlxSprite
-{
-    public var uselessString:String = '';
-
-    public function new(x:Float, y:Float, uselessString:String = "infinity"):Void
-    {
-	super(x, y);
-
-	switch(uselessString) 
-	{
-	    case 'infinity':
-		frames = Paths.getSparrowAtlas('numbers/infinity');
-		animation.addByPrefix('infinity', "infinity", 17);
-	}
-    }
-
-    override function update(elapsed:Float)
-    {
-        super.update(elapsed);
-    }
-
-    inline public function playAnimation(name:String, ?forced:Bool, ?reverse:Bool, ?frame:Int):Void {
-        animation.play(name, forced, reverse, frame);
     }
 }

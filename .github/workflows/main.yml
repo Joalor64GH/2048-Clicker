@@ -27,9 +27,6 @@ jobs:
           haxelib --never install flixel
           haxelib run lime setup flixel
           haxelib run lime setup
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install flixel-tools
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -57,9 +54,6 @@ jobs:
           haxelib --never install flixel
           haxelib run lime setup flixel
           haxelib run lime setup
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install flixel-tools
           haxelib list
         shell: cmd
       - name: Create Version Tag
@@ -89,9 +83,6 @@ jobs:
           haxelib --never install flixel
           haxelib run lime setup flixel
           haxelib run lime setup
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install flixel-tools
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
