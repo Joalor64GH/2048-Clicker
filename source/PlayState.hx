@@ -181,8 +181,8 @@ class PlayState extends FlxState
             remove(expo);
             infinity = new FlxSprite(0, 0);
             infinity.frames(Paths.getSparrowAtlas("numbers/infinity"));
-            logoBl.animation.addByPrefix('rainbow', 'infinity', 24);
-		    logoBl.animation.play('rainbow');
+            infinity.animation.addByPrefix('rainbow', 'infinity', 24);
+	    infinity.animation.play('rainbow');
             infinity.screenCenter();
             add(infinity);
         }
