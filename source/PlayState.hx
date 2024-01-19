@@ -57,7 +57,7 @@ class PlayState extends FlxState
         {
             if (clicks == 0) {
                 remove(num);
-                num = new Number(0, 0, "one");
+                num = new Number(0, 0);
             } else if (clicks == 1) {
                 remove(num);
                 num = new Number(0, 0, "two");
@@ -125,7 +125,7 @@ class PlayState extends FlxState
             remove(num);
             if (clicks == 21) {
                 remove(num);
-                expo = new Exponent(0, 0, "twentyone");
+                expo = new Exponent(0, 0);
             } else if (clicks == 22) {
                 remove(expo);
                 expo = new Exponent(0, 0, "twentytwo");
@@ -181,7 +181,7 @@ class PlayState extends FlxState
             remove(expo);
             infinity = new FlxSprite(0, 0);
             infinity.frames = Paths.getSparrowAtlas("numbers/infinity");
-            infinity.animation.addByPrefix('rainbow', 'infinity', 24);
+            infinity.animation.addByPrefix('rainbow', 'infinity', 12);
 	    infinity.animation.play('rainbow');
             infinity.screenCenter();
             add(infinity);
